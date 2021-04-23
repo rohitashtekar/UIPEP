@@ -1,5 +1,34 @@
-p{
+.tagl{
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
     font-weight: bold ;
+    background-color:aliceblue;
+}
+.head1{
+    color: tomato;
+    text-align: center;
+    text-decoration: underline;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    background-color: white;
+}
+body{
+    background-color:cornflowerblue;
+}
+.meal{
+    border: 5px solid black;
+    padding-left: 20px;
+    margin: 20px;
+}
+#bfast{
+    width: 100;
+    height: 50;
+}
+#lunch{
+    width: 100;
+    height: 50;
+}
+#dinner{
+    width: 100;
+    height: 50;
 }
