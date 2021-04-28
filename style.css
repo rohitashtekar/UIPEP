@@ -1,5 +1,11 @@
+.headhr{
+    height: 10px;
+    border-style: solid;
+    background-color: black;
+    margin: 0;
+}
 .heading{
-    background-color: aquamarine;
+    background-color: white;
     padding-top: 1px;
     padding-bottom: 1px;
 }
@@ -34,7 +40,7 @@ li a{
     color: white;
 }
 li a:hover{
-    background-color: blue;
+    background-color: darkgray;
     padding: 1px;
 }
 body{
@@ -71,11 +77,18 @@ img{
 div{
     align-items: center;
 }
-.link-button{
-    color: black;
-    width: 122px;
+hr{
+    height: 1px;
+    border-style: solid;
+    background-color: black;
+    margin: 0;
+}
+.about-button{
     padding-left: 600px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: white;
 }
 .author-linkedin{
-    padding-left: 607px;
+    padding-left: 8px;
 }
