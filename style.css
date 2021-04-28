@@ -1,5 +1,5 @@
 .heading{
-    background-color: white;
+    background-color: aquamarine;
     padding-top: 1px;
     padding-bottom: 1px;
 }
@@ -52,6 +52,7 @@ body{
     max-width: 530px;
     padding-bottom: 18px;
     background-color: white;
+    border: 1px solid black;
 }
 .meal-tag{
     font-size: large;
@@ -63,7 +64,7 @@ body{
     color: black;
 }
 img{
-    border: solid white 2px;
+    border: solid black 1px;
     height: 200px;
     width: 500px;
 }
@@ -71,10 +72,10 @@ div{
     align-items: center;
 }
 .link-button{
-    border: solid 1px white;
-    background-color:white;
     color: black;
+    width: 122px;
+    padding-left: 600px;
 }
 .about-author{
-    
+    padding-left: 607px;
 }
