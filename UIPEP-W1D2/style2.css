@@ -4,7 +4,7 @@
 }
 .main{
     height: 1000px;
-    background-image:  linear-gradient(yellow,orange);
+    background-image:  linear-gradient(cyan,yellow,rgb(124, 196, 146));
 }
 .nav-bar{  /* I just wanted to write a comment in CSS*/
     padding-top: 50px;
@@ -12,11 +12,11 @@
 }
 .left{
     float: left;
-    padding-left: 10px;
+    padding-left: 40px;
 }
 .right{
     float: right;
-    padding-right: 10px;
+    padding-right: 70px;
 }
 li{
     display: inline-block;
@@ -38,8 +38,8 @@ li{
     text-decoration: none;
 }
 .atag:hover{
-    color: black;
-    background-color: khaki;
+    color: white;
+    background-color: rgb(37, 149, 184);
     padding: 8px;
     border: 1px black solid;
 }
@@ -54,10 +54,47 @@ li{
     color: white;
 }
 .main-text{
-    font-family:monospace ;
-    padding: 180px;
-    padding-left: 35px;
+    padding: 150px;
+    padding-left: 70px;
+}
+.main-text1{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: xxx-large;
+}
+.only-text{
+    display: inline-block;
 }
 .sub-text{
     font-size: x-large;
+}
+.abutton{
+    color: black;
+    font-family:monospace;
+    font-size: xx-large;
+    font-weight: bold;
+    padding: 30px 60px 30px 60px;
+    background-image: linear-gradient(#ff9900,#fad60e);
+    border-radius: 10px;
+}
+.abutton:hover{
+    background-image: linear-gradient(#d12020,#e6ad11);
+    color:white;
+    border-radius: 10px;
+}
+.side-images{
+    padding-top: 25px;
+    display:inline-flex;
+    float: right;
+}
+.image1{
+    height: 250px;
+    width: 200px;
+}
+.image2{
+    height: 270px;
+    width: 210px;
+}
+.image3{
+    height: 300px;
+    width: 230px;
 }
