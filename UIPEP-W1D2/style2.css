@@ -121,17 +121,15 @@ li{
     width: 230px;
 }
 .features{
-    display: inline-flex;
-    height: 400px;
-    width:1349px;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 1000px;
     background-color: white;
 }
 .feat{
-    height: 400px;
-    width: 410px;
-    border: 1px solid black;
-    margin-right: 20px;
-    margin-left: 20px;
+    float: left;
+    clear: right;
 }
 .footer{
     color: black;
