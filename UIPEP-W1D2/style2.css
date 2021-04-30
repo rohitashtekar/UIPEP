@@ -1,16 +1,18 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    
 }
 .main{
-    height: 1000px;
-    background-image:  linear-gradient(cyan,yellow,rgb(124, 196, 146));
+    height: 100%;
+    background-image: linear-gradient(rgb(207, 238, 238),rgb(248, 248, 98));
 }
 .nav-bar{  /* I just wanted to write a comment in CSS*/
-    padding-top: 50px;
+    padding-top: 50px; /* rgb(207, 238, 238) rgb(248, 248, 98)*/
     padding-bottom: 10px;
 }
-.left{
+.left{ /*about.me*/
     float: left;
     padding-left: 40px;
 }
@@ -25,7 +27,7 @@ li{
     font-size: large;
     font-weight: bold;
 }
-.abouttag{
+.about-tag{
     text-decoration: none;
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
@@ -33,32 +35,35 @@ li{
     padding: 9px;
     text-transform: lowercase;
 }
-.atag{
+.about-tag:hover{
+    color: rgb(46, 136, 136);
+}
+.anchor-tag{
     padding: 8px;
     text-decoration: none;
     color: black;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 300;
 }
-.atag:hover{
+.anchor-tag:hover{
     color: white;
     background-color: rgb(37, 149, 184);
     padding: 8px;
     border-radius: 8px;
     box-shadow: 2px 4px 8px rgb(82, 163, 152);
 }
-.gtag{
+.get-tag{
     border-radius: 8px;
     color: white;
-    background-color:darkcyan;
+    background-color:rgb(26, 161, 161);
     padding: 8px;
     text-decoration: none;
     margin-left: 8px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: bold;
     box-shadow: 2px 4px 8px rgb(50, 141, 129);
 }   
-.gtag:hover{
-    background-color: rgb(31, 122, 145);
+.get-tag:hover{
+    background-color: rgb(30, 112, 133);
     color: white;
 }
 .main-text{
@@ -73,7 +78,9 @@ li{
     display: inline-block;
 }
 .sub-text{
-    font-size: x-large;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: larger;
+    font-weight: bold;
 }
 .abutton{
     color: black;
@@ -83,35 +90,48 @@ li{
     padding: 30px 60px 30px 60px;
     background-image: linear-gradient(#ff9900,#fad60e);
     border-radius: 10px;
-    box-shadow: 8px 8px 8px orange;
 }
 .abutton:hover{
     background-image: linear-gradient(#d12020,#e6ad11);
     color:white;
     border-radius: 10px;
-    box-shadow: 8px 8px 8px  rgb(240, 120, 8);
+    box-shadow: 8px 8px 10px  rgb(245, 190, 109);
 }
 .side-images{
     padding-top: 25px;
     display:inline-flex;
     float: right;
 }
+.image{
+    filter: drop-shadow(10px 10px 8px rgb(250, 201, 110));
+}
 .image1{
     height: 250px;
     width: 200px;
-    filter: drop-shadow(10px 10px 8px orange);
+    
 }
 .image2{
+    padding-top: 8px;
     height: 280px;
     width: 220px;
-    filter: drop-shadow(10px 10px 8px orange);
-    padding-top: 8px;
 }
 .image3{
     padding-top: 16px;
     height: 310px;
     width: 230px;
-    filter: drop-shadow(10px 10px 8px orange);
+}
+.features{
+    display: inline-flex;
+    height: 400px;
+    width:1349px;
+    background-color: white;
+}
+.feat{
+    height: 400px;
+    width: 410px;
+    border: 1px solid black;
+    margin-right: 20px;
+    margin-left: 20px;
 }
 .footer{
     color: black;
