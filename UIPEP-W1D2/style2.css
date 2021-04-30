@@ -69,6 +69,7 @@ li{
 .main-text{
     padding: 150px;
     padding-left: 70px;
+    padding-bottom: 45px;
 }
 .main-text1{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -103,33 +104,71 @@ li{
     float: right;
 }
 .image{
-    filter: drop-shadow(10px 10px 8px rgb(250, 201, 110));
+    filter: drop-shadow(8px 8px 8px rgb(250, 201, 110));
 }
 .image1{
+    /* inherits from .image */
     height: 250px;
     width: 200px;
     
 }
 .image2{
+    /* inherits from .image */
     padding-top: 8px;
     height: 280px;
     width: 220px;
 }
 .image3{
+    /* inherits from .image */
     padding-top: 16px;
     height: 310px;
     width: 230px;
 }
 .features{
-    display:flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 1000px;
+    height: 900px;
+    padding: 100px;
+    padding-top: 20px;
     background-color: white;
 }
+.feature-img{
+    display:flex;
+    justify-content: space-between;
+    align-items: stretch;
+    height: 400px;
+}
 .feat{
-    float: left;
-    clear: right;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: x-large;
+    margin: 12px;
+}
+
+.fimage{
+    padding: 40px;
+    height: 80%;
+    width: 100%;
+}
+.ft{
+    text-align: center;
+}
+.ft-head{
+    padding: 5px;
+}
+.ft-p{
+    font-size:small;
+}
+.after-feat{
+    padding: 50px;
+    text-align: center;
+    font-family:'Courier New', Courier, monospace;
+    font-size: x-large;
+    font-weight: bold;
+}
+.feat-t{
+    text-decoration: none;
+}
+.feat-t:hover{
+    color: black;
+    text-decoration: underline;
 }
 .footer{
     color: black;
