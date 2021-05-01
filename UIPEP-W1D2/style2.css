@@ -69,9 +69,11 @@ li{
 .main-text{
     padding: 150px;
     padding-left: 70px;
-    padding-bottom: 45px;
+    padding-bottom: 118px;
+    display: inline-flex;
+    width:100%;
 }
-.main-text1{
+.main-sub{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: xxx-large;
 }
@@ -88,7 +90,7 @@ li{
     font-family:monospace;
     font-size: xx-large;
     font-weight: bold;
-    padding: 30px 60px 30px 60px;
+    padding: 20px 50px 20px 50px;
     background-image: linear-gradient(#ff9900,#fad60e);
     border-radius: 10px;
 }
@@ -99,40 +101,59 @@ li{
     box-shadow: 8px 8px 10px  rgb(245, 190, 109);
 }
 .side-images{
-    padding-top: 25px;
     display:inline-flex;
-    float: right;
+    align-items: flex-end;
+    position: absolute;
+    left: 560px;
 }
 .image{
-    filter: drop-shadow(8px 8px 8px rgb(250, 201, 110));
+    /* Apply shadow*/
 }
 .image1{
     /* inherits from .image */
     height: 250px;
-    width: 200px;
+    width:  205px;
     
 }
 .image2{
     /* inherits from .image */
-    padding-top: 8px;
-    height: 280px;
-    width: 220px;
+    height: 325px;
+    width: 290px;
 }
-.image3{
+.image3{    
     /* inherits from .image */
-    padding-top: 16px;
-    height: 310px;
-    width: 230px;
+    height: 400px;
+    width: 290px;
+}
+.sib{
+    z-index: 1;
+    border-radius: 5px;
+    padding: 6px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    background-color: rgba(0,0,0,0.25);
+    font-size: small;
+    font-weight: bolder;
+    position: absolute;
+    top:570px;
+}
+.sib1{
+    left:580px;    
+}
+.sib2{
+    left:875px;    
+}
+.sib3{
+    left:1140px;
 }
 .features{
-    height: 900px;
+    max-width: 100%; ;
     padding: 100px;
     padding-top: 20px;
     background-color: white;
 }
 .feature-img{
     display:flex;
-    justify-content: space-between;
     align-items: stretch;
     height: 400px;
 }
@@ -144,6 +165,7 @@ li{
 
 .fimage{
     padding: 40px;
+    padding-left: 60px;
     height: 80%;
     width: 100%;
 }
