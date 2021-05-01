@@ -69,7 +69,7 @@ li{
 .main-text{
     padding: 150px;
     padding-left: 70px;
-    padding-bottom: 118px;
+    padding-bottom: 120px;
     display: inline-flex;
     width:100%;
 }
@@ -107,44 +107,44 @@ li{
     left: 560px;
 }
 .image{
-    /* Apply shadow*/
+    box-shadow: 0px -1px 7px 3px grey;
 }
 .image1{
     /* inherits from .image */
-    height: 250px;
-    width:  205px;
+    height: 260px;
+    width:  225px;
     
 }
 .image2{
     /* inherits from .image */
     height: 325px;
-    width: 290px;
+    width: 270px;
 }
 .image3{    
     /* inherits from .image */
     height: 400px;
-    width: 290px;
+    width: 294px;
 }
 .sib{
     z-index: 1;
     border-radius: 5px;
     padding: 6px;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: white;
-    background-color: rgba(0,0,0,0.25);
+    color: black;
+    background-color: rgba(242, 243, 244,0.7);
     font-size: small;
     font-weight: bolder;
     position: absolute;
-    top:570px;
+    top:580px;
 }
 .sib1{
-    left:580px;    
+    left:583px;    
 }
 .sib2{
     left:875px;    
 }
 .sib3{
-    left:1140px;
+    left:1130px;
 }
 .features{
     max-width: 100%; ;
@@ -162,7 +162,6 @@ li{
     font-size: x-large;
     margin: 12px;
 }
-
 .fimage{
     padding: 40px;
     padding-left: 60px;
@@ -182,13 +181,13 @@ li{
     padding: 50px;
     text-align: center;
     font-family:'Courier New', Courier, monospace;
-    font-size: x-large;
+    font-size: large;
     font-weight: bold;
 }
-.feat-t{
+.afeat-t{
     text-decoration: none;
 }
-.feat-t:hover{
+.afeat-t:hover{
     color: black;
     text-decoration: underline;
 }
