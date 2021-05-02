@@ -150,10 +150,11 @@ li{
     max-width: 100%; ;
     padding: 100px;
     padding-top: 20px;
+    height: 800px;
     background-color: white;
 }
 .feature-img{
-    display:flex;
+    display:inline-flex;
     align-items: stretch;
     height: 400px;
 }
@@ -190,6 +191,24 @@ li{
 .afeat-t:hover{
     color: black;
     text-decoration: underline;
+}
+.ed-large{
+    display: inline-flex;
+    align-items: flex-end;
+    position: relative;
+    top: 200px;
+    left: 200px;
+    height: 300px;
+    width: 600px;
+    background-color: black;
+}
+.ed-ins{
+    display: inline-flex;
+    position: relative;
+    left: 200px;
+    height: 420px;
+    width: 700px;
+    background-color: black;
 }
 .footer{
     color: black;
