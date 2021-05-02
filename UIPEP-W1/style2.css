@@ -9,16 +9,16 @@
     background-image: linear-gradient(rgb(207, 238, 238),rgb(248, 248, 98));
 }
 .nav-bar{  /* I just wanted to write a comment in CSS*/
-    padding-top: 50px; /* rgb(207, 238, 238) rgb(248, 248, 98)*/
-    padding-bottom: 10px;
+    padding: 50px 0px 10px 0px;
 }
 .left{ /*about.me*/
     float: left;
     padding-left: 40px;
 }
 .right{
-    float: right;
-    padding-right: 100px;
+    float: left;
+    position: absolute;
+    left: 740px;
 }
 li{
     display: inline-block;
@@ -69,7 +69,7 @@ li{
 .main-text{
     padding: 150px;
     padding-left: 70px;
-    padding-bottom: 120px;
+    padding-bottom: 118px;
     display: inline-flex;
     width:100%;
 }
@@ -107,7 +107,7 @@ li{
     left: 560px;
 }
 .image{
-    box-shadow: 0px -1px 7px 3px grey;
+    box-shadow: 0px -1px 7px 0px grey;
 }
 .image1{
     /* inherits from .image */
@@ -131,7 +131,7 @@ li{
     padding: 6px;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: black;
-    background-color: rgba(242, 243, 244,0.7);
+    background-color: rgba(242, 243, 244,0.6);
     font-size: small;
     font-weight: bolder;
     position: absolute;
@@ -148,20 +148,23 @@ li{
 }
 .features{
     max-width: 100%; ;
-    padding: 100px;
-    padding-top: 20px;
-    height: 800px;
+    padding: 20px 100px 0px 100px;
+    height: 770px;
     background-color: white;
 }
 .feature-img{
     display:inline-flex;
     align-items: stretch;
     height: 400px;
+    padding: 0px 50px 0px 50px;
+    position: absolute;
+    left: 0px;
 }
 .feat{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: x-large;
     margin: 12px;
+    width: 33%;
 }
 .fimage{
     padding: 40px;
@@ -179,7 +182,9 @@ li{
     font-size:small;
 }
 .after-feat{
-    padding: 50px;
+    position: absolute;
+    top: 1100px;
+    left: 500px;
     text-align: center;
     font-family:'Courier New', Courier, monospace;
     font-size: large;
@@ -192,27 +197,119 @@ li{
     color: black;
     text-decoration: underline;
 }
-.ed-large{
-    display: inline-flex;
-    align-items: flex-end;
-    position: relative;
-    top: 200px;
-    left: 200px;
-    height: 300px;
-    width: 600px;
-    background-color: black;
+.ei{
+    box-shadow: 0px -1px 7px 0px grey;
+    border-radius: 25px;
+    overflow-x: hidden;
 }
-.ed-ins{
+.ed-left{
+    display: block;
+    position: absolute;
+    top: 1330px;
+    left: 190px;
+    z-index: 2;
+    height: 460px;
+    width: 260px;
+    background-color: white;
+}
+.ed-right{
     display: inline-flex;
     position: relative;
-    left: 200px;
-    height: 420px;
-    width: 700px;
-    background-color: black;
+    top: 620px;
+    left: 310px;
+    height: 522px;
+    width: 750px;
+    background-color: white;
+}
+.edl-image{
+    width: 260px;
+    height: 180px;
+}
+.edl-name{
+    position: relative;
+    bottom: 50px;
+    left: 75px;
+    color: white;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-transform: uppercase;
+}
+.edl-nsub{
+    position: relative;
+    bottom: 50px;
+    left: 25px;
+    color: white;
+    font-family: sans-serif;
+    font-size: small;
+}
+.edl-but{
+    text-align: center;
+    position: inherit;
+    top: 190px;
+    left: 21px;
+    padding-top: 13px;
+    height: 40px;
+    width: 220px;
+    color: white;
+    background-color: #4274a7;
+    border-radius: 4px;
+    font-family: sans-serif;
+    font-size: small
+}
+.edl-about{
+    padding: 12px 8px 0px 8px;
+    text-align: justify ;
+    font-family: sans-serif;
+    line-height: 18px;
+    position: relative;
+    top: 20px;
+}
+.edl-icons{
+    margin: 25px 0px 0px 7px;
+}
+.edr-box{
+    display: block;
+}
+.edr-name{
+    position: relative;
+    color: black;
+    padding: 15px 0px 0px 8px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+}
+.edr-nsub{
+    position: relative;
+    left: 8px;
+    color: black;
+    font-family: sans-serif;
+    font-size: small;
+}
+.edr-but{
+    text-align: center;
+    position: inherit;
+    margin: 10px 0px 0px 22px;
+    padding-top: 12px;
+    height: 40px;
+    width: 250px;
+    color: white;
+    background-color: #4274a7;
+    border-radius: 4px;
+    font-family: sans-serif;
+    font-size: small
+}
+.edr-about{
+    padding: 12px 8px 0px 8px;
+    text-align: justify ;
+    font-family: sans-serif;
+    line-height: 22px;
+    position: relative;
+    top: 20px;
+}
+.edr-icons{
+    margin: 30px 0px 0px 7px;
 }
 .footer{
     color: black;
     font-weight: bold;
-    padding-top: 250px;
+    margin-top: 800px;
     text-align: center;
 }
