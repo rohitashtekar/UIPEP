@@ -6,7 +6,7 @@
 }
 .main{
     height: 100%;
-    background-image: linear-gradient(rgb(207, 238, 238),rgb(248, 248, 98));
+    background-image: linear-gradient(rgb(207, 238, 238),rgb(40, 123, 148));
 }
 .nav-bar{  /* I just wanted to write a comment in CSS*/
     padding: 50px 0px 10px 0px;
@@ -15,7 +15,7 @@
     float: left;
     padding-left: 40px;
 }
-.right{
+.right{ /* nav-bar options*/
     float: left;
     position: absolute;
     left: 740px;
@@ -32,11 +32,13 @@ li{
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
     font-size: x-large;
-    padding: 9px;
+    padding: 9px 0px 0px 0px;
     text-transform: lowercase;
+    letter-spacing: 0.5px;
 }
 .about-tag:hover{
     color: rgb(46, 136, 136);
+    border-bottom: 2px solid rgb(46, 136, 136);
 }
 .anchor-tag{
     padding: 8px;
@@ -138,7 +140,7 @@ li{
     top:580px;
 }
 .sib1{
-    left:583px;    
+    left:585px;    
 }
 .sib2{
     left:875px;    
@@ -195,9 +197,9 @@ li{
 }
 .afeat-t:hover{
     color: black;
-    text-decoration: underline;
+    border-bottom: black 2px solid;
 }
-.ei{
+.edi{
     box-shadow: 0px -1px 7px 0px grey;
     border-radius: 25px;
     overflow-x: hidden;
@@ -215,8 +217,8 @@ li{
 .ed-right{
     display: inline-flex;
     position: relative;
-    top: 620px;
-    left: 310px;
+    bottom: 130px;
+    left: 400px;
     height: 522px;
     width: 750px;
     background-color: white;
@@ -237,6 +239,7 @@ li{
     position: relative;
     bottom: 50px;
     left: 25px;
+    padding: 2px 0px 0px 0px;
     color: white;
     font-family: sans-serif;
     font-size: small;
@@ -256,15 +259,15 @@ li{
     font-size: small
 }
 .edl-about{
-    padding: 12px 8px 0px 8px;
+    padding: 12px 12px 0px 12px;
     text-align: justify ;
-    font-family: sans-serif;
+    font-family: monospace;
     line-height: 18px;
     position: relative;
     top: 20px;
 }
 .edl-icons{
-    margin: 25px 0px 0px 7px;
+    margin: 25px 0px 0px 9px;
 }
 .edr-box{
     display: block;
@@ -272,20 +275,20 @@ li{
 .edr-name{
     position: relative;
     color: black;
-    padding: 15px 0px 0px 8px;
+    padding: 100px 0px 0px 20px;
     font-family: sans-serif;
     text-transform: uppercase;
 }
 .edr-nsub{
     position: relative;
-    left: 8px;
+    left: 20px;
+    padding: 5px 0px 0px 0px;
     color: black;
     font-family: sans-serif;
     font-size: small;
 }
 .edr-but{
     text-align: center;
-    position: inherit;
     margin: 10px 0px 0px 22px;
     padding-top: 12px;
     height: 40px;
@@ -297,19 +300,32 @@ li{
     font-size: small
 }
 .edr-about{
-    padding: 12px 8px 0px 8px;
+    padding: 12px 20px 12px 20px;
     text-align: justify ;
-    font-family: sans-serif;
+    font-family: monospace;
     line-height: 22px;
     position: relative;
     top: 20px;
 }
 .edr-icons{
-    margin: 30px 0px 0px 7px;
+    margin: 30px 0px 0px 18px;
 }
-.footer{
-    color: black;
-    font-weight: bold;
-    margin-top: 800px;
+.entrep{
+    color: rgb(49, 73, 87);
     text-align: center;
+    text-shadow: 3px 4px 3px rgba(173, 255, 255, 0.3);
+    font-family: "lato",arial;
+    font-weight: bold;  
+}
+.entrep-b{
+    padding: 20px 100px 20px 100px;
+    margin: 30px 0px 0px 0px;
+    border-radius: 8px;
+    background-image: /*Add value*/;
+}
+.bot-nav{
+    display: block;
+}
+.foot{
+    float: right;
 }
