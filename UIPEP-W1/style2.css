@@ -102,7 +102,7 @@
     background-image: linear-gradient(#d12020,#e6ad11);
     color:white;
     border-radius: 10px;
-    box-shadow: 8px 8px 10px  rgb(245, 190, 109);
+    box-shadow: 3px 4px 10px  rgb(245, 190, 109);
 }
 .side-images{
     display:inline-flex;
@@ -324,11 +324,17 @@
     padding: 20px 100px 20px 100px;
     margin: 50px 0px 40px 0px;
     border-radius: 8px;
-    /*background-image: Add value;*/
+    background: -webkit-linear-gradient(#9accc1, #55748d);
+    color: white;
+    font-family: "lato",arial;
+    font-size: medium;
+}
+.entrep-b:hover{
+    box-shadow: 5px 4px 8px 0px rgb(91, 157, 211);
 }
 .bot-nav{
     display: inline-flex;
-    height: 200px;
+    height: 250px;
     width: 100%;
     background-color: rgb(243, 243, 243);
     justify-content: space-around;
@@ -344,17 +350,17 @@
     font-size: small;
 }
 .twit-logo,.insta-logo{
-    margin: 0px 0px 0px 15px;
+    margin: 0px 0px 0px 25px;
     height:20px;
     width:22px;
 }
 .bn-4{
     height: 180px;
-    margin: 55px 0px 0px 0px;
+    margin: 50px 0px 0px 0px;
 }
 .foot{
     display: inline-flex;
-    float: right;
+    padding: 10px;
     font-family: "lato",arial;
     font-size: larger;
 }
