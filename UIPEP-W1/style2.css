@@ -6,7 +6,7 @@
 }
 .main{
     height: 100%;
-    background-image: linear-gradient(rgb(207, 238, 238),rgb(40, 123, 148));
+    background-image: linear-gradient(to right bottom,rgb(207, 238, 238),rgb(40, 123, 148));
     background-repeat: no-repeat;
     background-position: 0,100%;
 }
@@ -313,7 +313,7 @@
     margin: 30px 0px 0px 18px;
 }
 .entrep{
-    color: rgb(196, 229, 248);
+    color: rgb(226, 241, 250);
     text-align: center;
     text-shadow: 3px 4px 3px rgba(173, 255, 255, 0.3);
     font-family: "lato",arial;
@@ -321,16 +321,16 @@
     font-size: larger;
 }
 .entrep-b{
-    padding: 20px 100px 20px 100px;
+    padding: 16px 100px 18px 100px;
     margin: 50px 0px 40px 0px;
     border-radius: 8px;
-    background: -webkit-linear-gradient(#9accc1, #55748d);
-    color: white;
+    background: linear-gradient(to bottom,#accae9 50%,#91afcc 55%,#2664a1 100%);
+    color: black;
     font-family: "lato",arial;
     font-size: medium;
 }
 .entrep-b:hover{
-    box-shadow: 5px 4px 8px 0px rgb(91, 157, 211);
+    box-shadow: 5px 4px 8px 0px rgb(173, 213, 247);
 }
 .bot-nav{
     display: inline-flex;
