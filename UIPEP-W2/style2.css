@@ -347,6 +347,10 @@
     text-decoration: none;
     font-family: "lato",arial;
     font-size: small;
+    color: rgb(22, 80, 155);
+}
+.at:hover{
+    color: rgb(62, 146, 255);
 }
 .twit-logo,.insta-logo{
     margin: 0px 0px 0px 25px;
