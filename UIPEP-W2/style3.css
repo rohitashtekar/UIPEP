@@ -154,7 +154,7 @@
     padding: 10px 400px 10px 20px;
 }
 .bnl,.bnr{
-    list-style-type: none;
+    list-style-type: square;
     color: rgb(43, 86, 151);
     padding: 5px 0px 5px 0px;
     font-size: small;

@@ -19,3 +19,18 @@
     height: 100%;
     width: 100%;
 }
+.map-addr{
+    justify-content: center;
+}
+.ma-head{
+    font-family: monospace;
+    font-size: 30px;
+    padding: 30px 10px 0px 0px;
+}
+.addr{
+    font-family: monospace;
+    font-size: 18px;
+    text-align: justify;
+    padding-top: 30px;
+    letter-spacing: 0.2px;
+}
