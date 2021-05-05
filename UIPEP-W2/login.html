@@ -11,19 +11,76 @@
 <body>
     <div class="nav-bar">
         <ul class="ul-left">
-            <li class="p-nav pn-1"><a class="anchort" href="index2.html">about.me</a></li>
+            <li class="pn-1"><a class="anchort" href="index2.html">about.me</a></li>
         </ul>
         <ul class="ul-right">
             <li class="p-nav pn-2">Get started for free</li>
             <li class="p-nav pn-3">Features</li>
             <li class="p-nav pn-4">Pricing</li>
-            <li class="p-nav pn-5">Login</li>
+            <li class="p-nav pn-5">Login/SignUp</li>
         </ul>
     </div> 
-
-    <div class="main">
-        <input class="m-inp" type="text" name="username" placeholder="Enter name"> 
-        <input type="submit">
+    <div class="container">
+        <div class="block1">
+            <div class="fname">
+                <p class="fn-text">
+                    First Name:
+                </p>
+                <input class="inp-name mi" type="text" name="firstname" placeholder="Enter first name"> 
+                <input class="sub-but mi" type="submit">
+            </div>
+            <div class="lname">
+                <p class="ln-text">
+                    Last Name:
+                </p>
+                <input class="inp-name mi" type="text" name="lastname" placeholder="Enter last name"> 
+                <input class="sub-but mi" type="submit">
+            </div>
+        </div>
+        <div class="block2">
+            <div class="bday">
+                <p class="b-text">
+                    Birth Date:
+                </p>
+                <input class="inp-bday mi" type="date" name="birthday">
+            </div>
+            <div class="gender">
+                <p class="g-text">
+                    Gender:
+                </p>
+                <input class="g-inp" type="radio" name="gender" value="male" unchecked>Male
+                <input class="g-inp" type="radio" name="gender" value="female" unchecked>Female
+                <input class="g-inp" type="radio" name="gender" value="other" unchecked>Other
+            </div>
+        </div>
+        <div class="block3">
+            <div class="mcode">
+                <p class="mcode-text">
+                    Country code:
+                </p>
+                <input class="mc-inp" type="tel" name="mobile" placeholder="Enter Country code">
+            </div>
+            <div class="mobile">
+                <p class="mobile-text">
+                    Mobile No.:
+                </p>
+                <input class="mobile-inp" type="tel" name="mobile" placeholder="Enter Mobile no.">
+            </div>
+        </div>
+        <div class="block4">
+            <div class="mail">
+                <p class="mail-text">
+                    E-mail ID:
+                </p>
+                <input class="mail-inp" type="email" name="email" placeholder="Enter E-mail ID"> 
+            </div>
+            <div class="Aadhaar">
+                <p class="aadh-text">
+                    Aadhaar No.:
+                </p>
+                <input class="adh-inp" type="tel" name="aadhaar" placeholder="Enter 16-digit Aadhaar no.">
+            </div>
+        </div>
     </div>
 </body>
 </html>

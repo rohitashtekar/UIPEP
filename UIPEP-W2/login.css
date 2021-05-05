@@ -5,8 +5,7 @@
     font-family:lucida sans;
 }
 .nav-bar{
-    border-bottom: 0.5px solid rgb(204, 204, 204);
-    height: 60px;
+    height: 62px;
     width: 100%;
     background-color: black;
 }
@@ -28,30 +27,49 @@
     float: right;
 }
 .anchort{
-    padding: 20px 20px 20px 20px;
+    padding: 20px 20px 21px 20px;
     color: white;
     text-decoration: none;
+    font-size: 18px;
 }
 .anchort:hover{
     color: black;
 }
-
+.pn-1{
+    color: white;
+    display: inline-block;
+    padding: 18px 0px 20px 0px;
+    font-size: 20px;
+    font-weight: bold;
+}
 .pn-1:hover{
+    background-color: white;
     color: black;
 }
 .pn-2{
-    padding: 20px 20px 21px 20px;
+    padding: 20px 20px 23px 20px;
     font-size: 16px;
 }
 .pn-3,.pn-4,.pn-5{
     font-weight: 100;
     font-size: 15px;
-    padding: 21px 20px 21px 20px;
+    padding: 21px 20px 23px 20px;
 }
-.main{
-    padding: 20px 20px 20px 20px;
-    width: 100%;
-}
-input::-webkit-input-placeholder{
+input:focus::-webkit-input-placeholder{
     color: transparent;
 }
+.container{
+    width: 100%;
+    height: 100%;
+    border: 0.5px solid rgb(155, 155, 155);
+    background-color: aliceblue;
+    margin-top: 10px; 
+}
+.block1{
+    display: block;
+}
+.block2{
+    display: block;
+}
+
+

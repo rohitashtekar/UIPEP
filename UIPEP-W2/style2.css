@@ -89,19 +89,19 @@
     font-weight: bold;
 }
 .abutton{
-    color: black;
+    color: white;
     font-family:monospace;
     font-size: xx-large;
     font-weight: bold;
     padding: 20px 50px 20px 50px;
-    background-image: linear-gradient(#ff9900,#fad60e);
+    background: linear-gradient(to bottom,#3172b3 50%,#91afcc 60%,#accae9 100%);
     border-radius: 10px;
 }
 .abutton:hover{
-    background-image: linear-gradient(#d12020,#e6ad11);
+    background-image: linear-gradient(to bottom,#accae9 50%,#91afcc 55%,#2664a1 100%);
     color:white;
     border-radius: 10px;
-    box-shadow: 3px 4px 10px  rgb(245, 190, 109);
+    box-shadow: 3px 4px 10px  rgb(26, 83, 133);
 }
 .side-images{
     display:inline-flex;
