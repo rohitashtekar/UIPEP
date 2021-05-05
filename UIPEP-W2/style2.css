@@ -94,11 +94,11 @@
     font-size: xx-large;
     font-weight: bold;
     padding: 20px 50px 20px 50px;
-    background: linear-gradient(to bottom,#3172b3 50%,#91afcc 60%,#accae9 100%);
+    background: linear-gradient(to bottom,#3474b4 40%,#91afcc 60%,#accae9 100%);
     border-radius: 10px;
 }
 .abutton:hover{
-    background-image: linear-gradient(to bottom,#accae9 50%,#91afcc 55%,#2664a1 100%);
+    background-image: linear-gradient(to bottom,#accae9 40%,#91afcc 60%,#2664a1 100%);
     color:white;
     border-radius: 10px;
     box-shadow: 3px 4px 10px  rgb(26, 83, 133);
@@ -323,13 +323,13 @@
     padding: 16px 100px 18px 100px;
     margin: 50px 0px 40px 0px;
     border-radius: 8px;
-    background: linear-gradient(to bottom,#accae9 50%,#91afcc 55%,#2664a1 100%);
-    color: black;
+    background: linear-gradient(to bottom,#9db8d6 40%,#7294b4 55%,#15518d 100%);
+    color: white;
     font-family: "lato",arial;
     font-size: medium;
 }
 .entrep-b:hover{
-    box-shadow: 5px 4px 8px 0px rgb(173, 213, 247);
+    box-shadow: 3px 4px 10px  rgb(26, 83, 133);
 }
 .bot-nav{
     display: inline-flex;

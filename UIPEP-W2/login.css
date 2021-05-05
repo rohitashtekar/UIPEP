@@ -4,10 +4,23 @@
     box-sizing: border-box;
     font-family:lucida sans;
 }
+.page{
+    background:url("C:\\Users\\USER\\Documents\\GitHub\\UIPEP-Internship\\UIPEP-W2\\images2\\bg1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.head{
+    color: white;
+    text-align: center;
+    padding: 50px 0px 0px 0px;
+    text-transform: uppercase;
+    font-family: monospace;
+    font-size: 35px;
+}
 .nav-bar{
     height: 62px;
     width: 100%;
-    background-color: black;
+    background: rgba(122, 122, 122,0.4);
 }
 .p-nav{
     color: white;
@@ -30,7 +43,7 @@
     padding: 20px 20px 21px 20px;
     color: white;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 20px;
 }
 .anchort:hover{
     color: black;
@@ -55,21 +68,115 @@
     font-size: 15px;
     padding: 21px 20px 23px 20px;
 }
+.pn4{
+    color: white;
+    text-decoration: none;
+    padding: 20px 0px 20px 0px;
+}
+.pn4:hover{
+    color: black;
+}
+.container{
+    border: 1px solid rgb(182, 182, 182);
+    border-radius: 20px;
+    background:rgba(216, 216, 216,0.3);
+    margin: 50px 350px 50px 350px ;
+}
+.block{
+    display: inline-block;
+    padding: 20px 15px 20px 15px;
+    justify-content: center;
+    width: auto;
+}
+.box{
+    padding: 10px;
+    margin: 30px 30px 0px 30px;
+    border: 1px solid rgb(212, 212, 212);
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    display: block;
+}
+.fn-text,.ln-text,.b-text,.g-text,.mcode-text,.mobile-text,.mail-text,.aadh-text,.s-text,.radi,.leg {
+    color: white;
+    padding: 5px 0px 10px 20px;
+    font-weight: bold;
+}
 input:focus::-webkit-input-placeholder{
     color: transparent;
 }
-.container{
+.mi{
+    margin: 0px 0px 10px 18px;
+    padding: 10px;
+    border-radius: 10px;
+    width: 93%;
+}
+.g-inp1{
+    margin-left: 20px;
+}
+.radi{
+    display: inline-flex;
+    margin: 8px 10px 10px 10px;
+    padding: 0px;
+    font-size: medium;
+}
+.legend{
+    color: white;
+    padding: 0px;
+}
+.ud{
+    border-radius: 10px;
+    margin: 0px 10px 10px 10px;
+    padding: 10px 0px 15px 0px;
+}
+.submit-button{
+    padding: 8px 10px 30px 10px;
+    justify-items: center;
+    margin-left: 180px;
+}
+.sub-but{
+    color: white;
+    padding: 20px 100px 20px 100px;
+    margin-top: 20px;
+    border-radius: 10px;
+    font-size: medium;
+    font-weight: bold;
+    background:radial-gradient(rgb(131, 131, 131),rgb(75, 75, 75));
+}
+.sub-but:hover{
+    background:radial-gradient(rgb(102, 102, 102),rgb(48, 48, 48));
+}
+.divider{
+    display: inline-flex;
+    justify-content: center;
     width: 100%;
-    height: 100%;
-    border: 0.5px solid rgb(155, 155, 155);
-    background-color: aliceblue;
-    margin-top: 10px; 
 }
-.block1{
-    display: block;
+.or{
+    color: white;
+    padding: 10px;
+    margin-bottom: 40px;
+    height: 40px;
+    width: 50%;
+    text-align: center;
+    z-index: 1;
+    overflow: hidden;
+    font-family: monospace;
+    font-size: 20px;
 }
-.block2{
-    display: block;
+.or::before,.or::after{
+    background-color: rgb(216, 216, 216);
+    content: "";
+    display: inline-block;
+    height: 2px;
+    position: relative;
+    vertical-align: middle;
+    width: 50%;
 }
-
-
+.or::before {
+    right: 0.5em;
+    margin-left: -50%;
+}
+.or::after {
+    left: 0.5em;
+    margin-right: -50%;
+}

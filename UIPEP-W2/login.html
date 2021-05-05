@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="C:\Users\USER\Documents\GitHub\UIPEP-Internship\UIPEP-W2\login.css">
     <title>Login | about.me</title>
 </head>
-<body>
+<body class="page">
     <div class="nav-bar">
         <ul class="ul-left">
             <li class="pn-1"><a class="anchort" href="index2.html">about.me</a></li>
@@ -16,71 +16,115 @@
         <ul class="ul-right">
             <li class="p-nav pn-2">Get started for free</li>
             <li class="p-nav pn-3">Features</li>
-            <li class="p-nav pn-4">Pricing</li>
-            <li class="p-nav pn-5">Login/SignUp</li>
+            <li class="p-nav pn-4"><a class="pn4" href="C:\Users\USER\Documents\GitHub\UIPEP-Internship\UIPEP-W2\pricing.html" target="_blank">Pricing</a></li>
+            <li class="p-nav pn-5"><a class="pn4" href="C:\Users\USER\Documents\GitHub\UIPEP-Internship\UIPEP-W2\login.html">Login/SignUp</a></li>
         </ul>
     </div> 
-    <div class="container">
-        <div class="block1">
-            <div class="fname">
-                <p class="fn-text">
-                    First Name:
-                </p>
-                <input class="inp-name mi" type="text" name="firstname" placeholder="Enter first name"> 
-                <input class="sub-but mi" type="submit">
-            </div>
-            <div class="lname">
-                <p class="ln-text">
-                    Last Name:
-                </p>
-                <input class="inp-name mi" type="text" name="lastname" placeholder="Enter last name"> 
-                <input class="sub-but mi" type="submit">
-            </div>
-        </div>
-        <div class="block2">
-            <div class="bday">
-                <p class="b-text">
-                    Birth Date:
-                </p>
-                <input class="inp-bday mi" type="date" name="birthday">
-            </div>
-            <div class="gender">
-                <p class="g-text">
-                    Gender:
-                </p>
-                <input class="g-inp" type="radio" name="gender" value="male" unchecked>Male
-                <input class="g-inp" type="radio" name="gender" value="female" unchecked>Female
-                <input class="g-inp" type="radio" name="gender" value="other" unchecked>Other
-            </div>
-        </div>
-        <div class="block3">
-            <div class="mcode">
-                <p class="mcode-text">
-                    Country code:
-                </p>
-                <input class="mc-inp" type="tel" name="mobile" placeholder="Enter Country code">
-            </div>
-            <div class="mobile">
-                <p class="mobile-text">
-                    Mobile No.:
-                </p>
-                <input class="mobile-inp" type="tel" name="mobile" placeholder="Enter Mobile no.">
-            </div>
-        </div>
-        <div class="block4">
-            <div class="mail">
-                <p class="mail-text">
-                    E-mail ID:
-                </p>
-                <input class="mail-inp" type="email" name="email" placeholder="Enter E-mail ID"> 
-            </div>
-            <div class="Aadhaar">
-                <p class="aadh-text">
-                    Aadhaar No.:
-                </p>
-                <input class="adh-inp" type="tel" name="aadhaar" placeholder="Enter 16-digit Aadhaar no.">
-            </div>
-        </div>
+
+    <div class="heading">
+        <h1 class="head">
+            Sign Up
+        </h1>
     </div>
+
+    <div class="container">
+            <div class="fname box">
+                <p class="fn-text">
+                    First Name
+                </p>
+                <input class="inp-name mi" type="text" id="firstname" name="firstname" placeholder="Enter first name"> 
+            </div>
+            <div class="lname box">
+                <p class="ln-text">
+                    Last Name
+                </p>
+                <input class="inp-name mi" type="text" id="lastname" name="lastname" placeholder="Enter last name"> 
+            </div>
+
+            <div class="bday box">
+                <p class="b-text">
+                    Birth Date
+                </p>
+                <input class="inp-bday mi" id="birthday" type="date" name="birthday">
+            </div>
+            <div class="gender box">
+                <p class="g-text">
+                    Gender
+                </p>
+                <input class="g-inp1" type="radio" id="gender" name="gender" value="male" unchecked><h5 class="radi">Male</h5>
+                <input class="g-inp2" type="radio" id="gender" name="gender" value="female" unchecked><h5 class="radi">Female</h5>
+                <input class="g-inp3" type="radio" id="gender" name="gender" value="other" unchecked><h5 class="radi">Other</h5>
+            </div>
+
+            <div class="mcode box">
+                <p class="mcode-text"">
+                    Country code
+                </p>
+                <input class="mc-inp mi" type="tel" id="cc" name="cc" placeholder="Enter Country code">
+            </div>
+            <div class="mobile box">
+                <p class="mobile-text">
+                    Mobile No.
+                </p>
+                <input class="mobile-inp mi" type="tel" id="mobile" name="mobile" placeholder="Enter Mobile no.">
+            </div>
+
+            <div class="mail box">
+                <p class="mail-text"">
+                    E-mail ID
+                </p>
+                <input class="mail-inp mi" type="email" id="email" name="email" placeholder="Enter E-mail ID"> 
+            </div>
+            <div class="Aadhaar box">
+                <p class="aadh-text">
+                    Aadhaar No.
+                </p>
+                <input class="adh-inp mi" type="tel" id="aadhaar" name="aadhaar" placeholder="Enter 16-digit Aadhaar no." required>
+            </div>
+        
+            <div class="status box">
+                <p class="s-text">
+                    Marital Status
+                </p>
+                <select class="mi" name="m-status">
+                    <option value="married">Married</option>
+                    <option value="single">Single</option>
+                    <option value="divorced">Divorced</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+       
+            <div class="block5 box">
+                <fieldset class="ud">
+                    <legend class="legend">Login Details</legend>
+                    <p class="leg">
+                        Username
+                    </p>
+                    <input class="fd-uname mi" type="text" name="username" required>
+                    <p class="leg">
+                        Password
+                    </p>
+                    <input class="fd-pword mi" type="password" name="password" required>
+                    <p class="leg">
+                         Confirm Password
+                    </p>
+                    <input class="fd-cpword mi" type="cpassword" name="cpassword" required>
+                </fieldset>
+            </div>
+
+            <div class="submit-button">
+                <button class="sub-but">
+                    Register
+                </button>
+            </div>
+    </div>
+
+    <div class="divider">
+        <h3 class="or">
+            OR
+        </h3>
+    </div>
+
+    
 </body>
 </html>
