@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    display: inline-flex;
+    width: 100%;
+}
+.map{
+    display: block;
+    margin: 30px 30px 30px 30px;  
+    width: 60%;
+    height: 600px;
+    background-color: rgb(224, 236, 247);
+}
+.gmaps{
+    border: 0.5px solid black;
+    height: 100%;
+    width: 100%;
+}
