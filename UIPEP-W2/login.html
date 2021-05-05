@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    
+    <script src="https://kit.fontawesome.com/a2bcbf9be9.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="C:\Users\USER\Documents\GitHub\UIPEP-Internship\UIPEP-W2\login.css">
     <title>Login | about.me</title>
 </head>
@@ -87,13 +88,20 @@
                     Marital Status
                 </p>
                 <select class="mi" name="m-status">
-                    <option value="married">Married</option>
                     <option value="single">Single</option>
+                    <option value="married">Married</option>
                     <option value="divorced">Divorced</option>
-                    <option value="other">Other</option>
+                    <option value="other">Don't want to disclose</option>
                 </select>
             </div>
-       
+
+            <div class="resume box">
+                <p class="r-text">
+                    Add resume
+                </p>
+                <input class="res-inp mi" type="file" name="r-text">
+            </div>
+
             <div class="block5 box">
                 <fieldset class="ud">
                     <legend class="legend">Login Details</legend>
@@ -112,6 +120,13 @@
                 </fieldset>
             </div>
 
+            <div class="terms box">
+                <input class="term-inp mi" type="checkbox" name="t-text" value="yes" unchecked required>
+                <div class="t-text">
+                    I agree to the <a class="pp" href="#">terms and conditions</a>
+                </div>
+            </div>
+
             <div class="submit-button">
                 <button class="sub-but">
                     Register
@@ -125,6 +140,15 @@
         </h3>
     </div>
 
-    
+    <div class="social">
+        <p class="soc-text">
+            Sign Up with
+        </p>
+        <div class="icons">
+            <i class="fab fa-facebook-f fa-2x"></i>
+            <i class="fab fa-google-plus-g  fa-2x"></i>
+            <i class="fab fa-twitter fa-2x"></i>
+        </div>
+    </div>
 </body>
 </html>

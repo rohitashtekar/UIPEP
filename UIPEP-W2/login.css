@@ -92,12 +92,12 @@
     padding: 10px;
     margin: 30px 30px 0px 30px;
     border: 1px solid rgb(212, 212, 212);
-    border-radius: 20px;
+    border-radius: 10px;
     justify-content: center;
     align-items: center;
     display: block;
 }
-.fn-text,.ln-text,.b-text,.g-text,.mcode-text,.mobile-text,.mail-text,.aadh-text,.s-text,.radi,.leg {
+.fn-text,.ln-text,.b-text,.g-text,.mcode-text,.mobile-text,.mail-text,.aadh-text,.s-text,.r-text,.radi,.leg     {
     color: white;
     padding: 5px 0px 10px 20px;
     font-weight: bold;
@@ -108,7 +108,7 @@ input:focus::-webkit-input-placeholder{
 .mi{
     margin: 0px 0px 10px 18px;
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 5px;
     width: 93%;
 }
 .g-inp1{
@@ -120,14 +120,41 @@ input:focus::-webkit-input-placeholder{
     padding: 0px;
     font-size: medium;
 }
-.legend{
-    color: white;
-    padding: 0px;
+.res-inp{
+    font-size: 15px;
+    padding: 8px 0px 10px 0px;
 }
 .ud{
     border-radius: 10px;
     margin: 0px 10px 10px 10px;
     padding: 10px 0px 15px 0px;
+}
+.legend{
+    color: white;
+    padding: 0px;
+}
+.terms{
+    display: inline-flex;
+    justify-content: flex-start;
+    width: 90%;
+    padding: 20px 10px 20px 18px;
+    border: none;
+}
+.term-inp{
+    width: 30px;
+    padding: 0px 0px 0px 10px;
+    margin: 0px 0px 0px 0px;
+}
+.t-text{
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+.pp{
+    color: white;
+}
+.pp:hover{
+    color: orange;
 }
 .submit-button{
     padding: 8px 10px 30px 10px;
@@ -154,7 +181,7 @@ input:focus::-webkit-input-placeholder{
 .or{
     color: white;
     padding: 10px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     height: 40px;
     width: 50%;
     text-align: center;
@@ -179,4 +206,31 @@ input:focus::-webkit-input-placeholder{
 .or::after {
     left: 0.5em;
     margin-right: -50%;
+}
+.social{
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-family: monospace;
+    font-size: 20px;
+    font-weight: bold;
+}
+.soc-text{
+    margin: 10px 0px 30px 0px;
+}
+.icons{
+    height: 100px;
+    background-color: rgba(220, 223, 224,0.3);
+    width: 30%;
+    margin-bottom: 40px;
+    display: inline-flex;
+    justify-content: center;
+    border: 0.5px solid rgb(216, 216, 216);
+    border-radius: 10px;
+}
+.fab{
+    margin: 30px 15px 20px 15px;
+}
+.fab:hover{
+    color: black;
 }
