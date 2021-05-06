@@ -58,7 +58,7 @@
 .get-tag{
     border-radius: 8px;
     color: white;
-    background-color:rgb(26, 161, 161);
+    background-color:rgb(26, 123, 161);
     padding: 8px;
     text-decoration: none;
     margin-left: 8px;
@@ -120,7 +120,7 @@
 }
 .image2{
     /* inherits from .image */
-    height: 325px;
+    height: 315px;
     width: 270px;
 }
 .image3{    
