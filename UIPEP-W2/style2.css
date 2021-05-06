@@ -89,16 +89,16 @@
     font-weight: bold;
 }
 .abutton{
-    color: white;
+    color: black;
     font-family:monospace;
     font-size: xx-large;
     font-weight: bold;
     padding: 20px 50px 20px 50px;
-    background: linear-gradient(to bottom,#3474b4 40%,#91afcc 60%,#accae9 100%);
+    background: linear-gradient(to bottom,#c4dbf1 40%,#8ba9c5 55%,#225e99 100%);
     border-radius: 10px;
 }
 .abutton:hover{
-    background-image: linear-gradient(to bottom,#accae9 40%,#91afcc 60%,#2664a1 100%);
+    background-image: linear-gradient(to bottom,#3474b4 40%,#91afcc 60%,#accae9 100%);
     color:white;
     border-radius: 10px;
     box-shadow: 3px 4px 10px  rgb(26, 83, 133);
