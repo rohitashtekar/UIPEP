@@ -18,7 +18,10 @@
     font-size: 20px;
     font-weight: bold;
 }
-.p-nav:hover{
+.p-nav:hover:not(.active){
+    border-bottom: 2px solid black;
+}
+.active{
     border-bottom: 2px solid black;
 }
 .ul-left{

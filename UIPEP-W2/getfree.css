@@ -1,0 +1,10 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+.main{
+    background: url("C:\\Users\\USER\\Documents\\GitHub\\UIPEP-Internship\\UIPEP-W2\\images2\\bg2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
