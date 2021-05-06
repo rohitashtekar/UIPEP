@@ -13,9 +13,7 @@
 .nav-bar{
     height: 62px;
     width: 100%;
-    background: rgba(122, 122, 122,0.4);
-    position: fixed;
-    z-index: 1;
+    background: black;
 }
 .p-nav{
     color: white;
@@ -39,7 +37,7 @@
     color: white;
     text-decoration: none;
     font-size: 20px;
-    background-color: rgb(185, 185, 185);
+    background-color: rgba(223, 223, 223,0.2);
 }
 .anchort:hover{
     color: black;
@@ -86,10 +84,121 @@
 .heading{
     color: black;
     padding: 100px 0px 20px 0px;
+    text-transform: uppercase;
+    font-family: monospace;
 }
 .container{
-    height: 1000px;
+    display: flex;
+    justify-content: center;
+}
+table{
+    border-collapse: separate;
+    border-spacing: 4px;
+    margin: 50px;
+    border-radius: 8px;
+}
+th,td{
+    padding: 15px 50px;
+    width: 500px;
+    vertical-align: middle;
+    font-family:monospace;
+    letter-spacing: 1px;
+    font-size: 15px;
+    font-size: 18px;
+}
+th:first-child{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+th:last-child{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 th{
-    
+    padding: 25px 20px 25px 20px;
+}
+td:first-child{
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    padding: 15px 50px;
+}
+td:last-child{
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+td:first-child{
+    background-color: rgb(216, 215, 215);
+}
+td{
+    background-color: rgb(197, 197, 197);
+    border: 1px solid black;
+    font-family: monospace;
+    font-weight: bold;
+}
+.options{
+    padding: 15px 45px;
+    width: 200px;
+    font-family:monospace;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    border-radius: 6px;
+}
+thead{
+    background: black;
+    color: white;
+    font-size: 11px;
+    text-transform: uppercase;
+}
+.notice{
+    color: white;
+    font-family: monospace;
+    font-weight: bold;
+    padding: 30px;
+    margin: 30px 50px 30px 50px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+}
+.n-link{
+    color: white;
+}
+.n-link:hover{
+    color: rgb(179, 179, 179);
+}
+.icons{
+    display: inline-flex;
+    width:100px;
+    justify-content: space-between;
+}
+.pn{
+    border-radius: 8px;
+    font-weight: bold;
+    font-family: monospace;
+}
+.pur{
+    display: inline-flex;
+    align-items: flex-end;
+    height: 80px;
+}
+.pur-text{
+    font-size: 20px;
+    padding: 20px;
+    background-color: rgba(255,255,255,0.6);
+    border: 1px solid black;
+}
+.pur-num{
+    padding: 18px 0px 20px 0px;
+    font-size: 19px;
+    font-family: fantasy;
+    letter-spacing: 1.5px;
+    align-items: center;
+    width: 100px;
+}
+.pur-but{
+    padding: 20px 150px 20px 150px;
+    font-size: 20px;
+    background: rgb(212, 212, 212);
 }

@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    <script src="https://kit.fontawesome.com/a2bcbf9be9.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="C:\Users\USER\Documents\GitHub\UIPEP-Internship\UIPEP-W2\getfree.css">
     <title>Get your free page | about.me</title>
 </head>
@@ -47,73 +48,136 @@
         <table class="tab">
             <thead class="t-head">
                 <th scope="column">Top level Domain</th>                
-                <th scope="column">Register</th>                
+                <th scope="column">
+                    <select class="options">
+                        <option>Register</option>
+                        <option>Upgrade</option>
+                        <option>Buy</option>
+                    </select>
+                </th>                
                 <th scope="column">Renew</th>                
                 <th scope="column">Transfer</th>
             </thead>
             <tbody>
                 <tr>
-                    <td>.com<sup>*</sup></td>
+                    <td><div class="icons">
+                            .com*
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                    </td>
                     <td>Rs656.05</td>
                     <td>Rs958.96</td>
                     <td>Rs633.89</td>
                 </tr>
                 <tr>
-                    <td>.net<sup>*</sup></td>
+                    <td><div class="icons">
+                            .net*
+                            <span class="icos"><i class="fas fa-shield-alt"></i></span>
+                        </div>
+                    </td>
                     <td>Rs811.20</td>
                     <td>Rs1,106.72</td>
                     <td>Rs848.14</td>
                 </tr>
                 <tr>
-                    <td>.org<sup>*</sup></td>
+                    <td><div class="icons">
+                            .org*
+                            <span class="icos"><i class="fas fa-shield-alt"></i></span>
+                        </div>
+                    </td>
                     <td>Rs678.22</td>
                     <td>Rs1,106.72</td>
                     <td>Rs848.14</td>
                 </tr>
                 <tr>
-                    <td>.io</td>
+                    <td><div class="icons">
+                            .io
+                            <span class="icos"><i class="fas fa-shield-alt"></i></span>
+                        </div>
+                    
                     <td>Rs2,346.55</td>
                     <td>Rs2,584.31</td>
                     <td>Rs2,436.55</td>
                 </tr>
                 <tr>
-                    <td>.co</td>
+                    <td><div class="icons">
+                            .co
+                            <span class="icos"><i class="fas fa-shield-alt"></i></span>
+                        </div>
+                    </td>
                     <td>Rs589.56</td>
                     <td>Rs1,919.39</td>
                     <td>Rs1,697.75</td>
                 </tr>
                 <tr>
-                    <td>.ai</td>
+                    <td><div class="icons">
+                            .ai
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                    </td>
                     <td>Rs5,170.10</td>
                     <td>Rs5,170.10</td>
                     <td>Rs14,035.65</td>
                 </tr>
                 <tr>
-                    <td>.co.uk</td>
+                    <td><div class="icons">
+                            .co.uk
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        </td>
                     <td>Rs515.68</td>
                     <td>Rs707.77</td>
                     <td>Rs0.00</td>
                 </tr>
                 <tr>
-                    <td>.ca</td>
+                    <td><div class="icons">
+                        .ca
+                        <i class="fas fa-shield-alt"></i>
+                    </div></td>
                     <td>Rs.885.08</td>
                     <td>Rs1,032.84</td>
                     <td>Rs774.26</td>
                 </tr>
                 <tr>
-                    <td>.dev<sup>*</sup></td>
+                    <td><div class="icons">
+                            .dev*
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                    </td>
                     <td>Rs1,106.72</td>
                     <td>Rs1,254.48</td>
                     <td>Rs1,106.72</td>
                 </tr>
                 <tr>
-                    <td>.me</td>
+                    <td><div class="icons">
+                            .me
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                    </td>
                     <td>Rs220.16</td>
                     <td>Rs1,402.24</td>
                     <td>Rs1,106.72</td>
                 </tr>
             </tbody>
         </table>
+    </div>
+    <div class="purchase">
+        <div class="pur">
+            <label class="pur-text pn" for="purnum">No. of Domains :</label>
+        </div>
+        <input type="number" name="purnum" class="pur-num pn" min="1">
+        <button class="pur-but pn">
+            PURCHASE
+        </button>
+    </div>
+
+    <div class="notice">
+        <p>
+            *ICANN (the Internet Corporation for Assigned Names and Numbers) charges a mandatory annual fee of $0.18 for each domain registration,<br/>
+            renewal or transfer. This will be added to the listed price for some domains, at the time of purchase. 
+            <a class="n-link" href="C:\Users\USER\Documents\GitHub\UIPEP-Internship\UIPEP-W2\domainlist.html" target="_blank">
+            See full list of affected domains →</a>
+        </p>
     </div>
     
 </body>
