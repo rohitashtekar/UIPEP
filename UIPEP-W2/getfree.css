@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Helvetica, Arial, sans-serif;
+    text-align: center;
 }
 .main{
     background-image: url("C:\\Users\\USER\\Documents\\GitHub\\UIPEP-Internship\\UIPEP-W2\\images2\\bg2.jpg");
@@ -88,4 +89,7 @@
 }
 .container{
     height: 1000px;
+}
+th{
+    
 }
