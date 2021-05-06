@@ -29,9 +29,13 @@
     font-size: 20px;
     font-weight: bold;
 }
-.p-nav:hover{
+.p-nav:hover:not(.active){
     color: black;
     background-color: white;
+}
+.active{
+    background-color: white;
+    color: black;
 }
 .ul-left{
     float: left;
@@ -66,15 +70,24 @@
 .pn-3,.pn-4,.pn-5{
     font-weight: 100;
     font-size: 15px;
-    padding: 21px 20px 23px 20px;
+    padding: 21px 0px 23px 0px;
 }
 .pn4{
     color: white;
     text-decoration: none;
-    padding: 20px 0px 20px 0px;
+    padding: 20px 20px 20px 20px;
 }
 .pn4:hover{
     color: black;
+}
+.pn-5{
+    color: white;
+    padding: 21px 20px 23px 20px;
+    color: black;
+}
+.pn5{
+    color:black;
+    text-decoration: none;
 }
 .container{
     border: 1px solid rgb(182, 182, 182);
