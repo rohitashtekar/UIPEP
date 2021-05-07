@@ -18,7 +18,7 @@
     font-size: 35px;
 }
 .nav-bar{
-    height: 62px;
+    height: 64px;
     width: 100%;
     background: rgba(122, 122, 122,0.4);
 }
@@ -64,25 +64,25 @@
     color: black;
 }
 .pn-2{
-    padding: 20px 20px 23px 20px;
+    padding: 22px 20px 23px 20px;
     font-size: 16px;
 }
 .pn-3,.pn-4,.pn-5{
     font-weight: 100;
     font-size: 15px;
-    padding: 21px 0px 23px 0px;
+    padding: 23px 0px 23px 0px;
 }
 .pn4{
     color: white;
     text-decoration: none;
-    padding: 20px 20px 20px 20px;
+    padding: 20px 20px 23px 20px;
 }
 .pn4:hover{
     color: black;
 }
 .pn-5{
     color: white;
-    padding: 21px 20px 23px 20px;
+    padding: 23px 20px 23px 20px;
     color: black;
 }
 .pn5{

@@ -173,21 +173,35 @@ thead{
     width:100px;
     justify-content: space-between;
 }
+.purchase{
+    display: inline-flex;
+    align-items: flex-end;
+}
 .pn{
     border-radius: 8px;
     font-weight: bold;
     font-family: monospace;
+    margin-right: 10px;
 }
 .pur{
     display: inline-flex;
     align-items: flex-end;
     height: 80px;
 }
+.purchase-label{
+    font-size: 20px;
+    background-color: rgba(255,255,255,0.6);
+    padding: 18px;
+    margin-bottom: 3px;
+}
 .pur-text{
     font-size: 20px;
     padding: 20px;
-    background-color: rgba(255,255,255,0.6);
+    align-items: center;
     border: 1px solid black;
+}
+input:focus::-webkit-input-placeholder{
+    color: transparent;
 }
 .pur-num{
     padding: 18px 0px 20px 0px;
