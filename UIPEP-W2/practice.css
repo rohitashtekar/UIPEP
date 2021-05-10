@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(97, 161, 216);
+    font: normal 14px/18px 'Helvetica', Arial, sans-serif;
+}
+.main{
+    width: 800px;
+    margin: auto;
+}
+.nav-bar{
+    height: 50px;
+    background-color: rgb(69, 192, 79);
+}
+a{
+    display: block;
+    float: left;
+    text-decoration: none;
+    padding: 0px 20px;
+    line-height: 50px;
+    border-right: 1px solid black;
+    color: white;
+}
+a:hover{
+    background-color: white;
+    color: black;
+}
+.active{
+    background-color: white;
+    color: black;
+}
+.content{
+    padding: 40px 150px 40px 20px;
+    background-color: white;
+    position: relative;
+}
+.callout{
+    position: absolute;
+    top: 150px;
+    bottom: 200px;
+    right: -150px;
+    width: 250px;
+    padding: 20px 20px;
+    border-top: 5px solid red;
+    background-color: rgb(255, 136, 115);
+    z-index: 2;
+}
+.callout-text{
+    color: white;
+    text-align: justify;
+}
+.content-ptag{
+    text-align: justify;
+    padding-bottom: 20px;
+}
+.practice{
+    display: inline-flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.practice-text{
+    color: black;
+}
+.image{
+    height: 150px;
+    width: 250px;
+}
+/* span + p{   adjacent sibling selector 
+    color: yellow;
+} */
+/* p[id]{  attr present selector 
+    color: blue;
+} */
+/* div[class="footer"]{ attr equals
+    color: bisque;
+} */
+/* div[class*="foo"]{ attr contains
+    color: aqua;
+} */
+/* div[class^="fo"]{ attr starts with
+    color: yellowgreen;
+} */
+/* div[class$="er"]{ attr ends with
+    color: violet;
+} */
+/* a[href$=".in"]{  attr ends with
+    font-size: 20px;
+} */
+/* a[class|="practice"]{ attr hyphenated
+    color: wheat;
+} */
+/* a[class~="text"]{ attr spaced
+    color: wheat;
+} */
+
+/* pseudo classes */
+/* a:visited{ 
+    color: yellowgreen;
+} */
+/* a:active{
+    color: aquamarine;
+} */
+/* p:only-child{
+    color: purple;
+} */
+/* p:first-of-type{
+    color: pink;
+} */
+/* img:only-of-type{
+    margin: 10px;
+} */
+/* p:nth-last-child(3n){
+    color: pink;
+} */
+/* p:nth-last-child(3n+1){
+    color: teal;
+} */
+/* a:target{ target pseudo
+    color: thistle;
+} */
+/* a:not(.active){ negation pseudo
+    color: yellow;
+} */
+/* p::first-letter{ textual pseudo elements
+    text-transform: uppercase;
+    font-size: 20px;
+} */
+/* p::first-line{
+    text-transform: uppercase;
+    font-size: 20px;
+} */
+/* span::after{
+    content:"Hello";
+    color: aliceblue;
+    background-color: black;
+} */
+/* span::before{
+    content:"Hello";
+    color: aliceblue;
+    background-color: black;
+} */
+p::selection{
+    color: blue;
+    background-color: aqua;
+}
+.footer{
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
+    background-color: rgb(255, 101, 134);
+    padding: 10px 20px;
+    width: 800px;
+}
