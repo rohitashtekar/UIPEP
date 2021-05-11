@@ -1,0 +1,272 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    list-style-type: none;
+    text-decoration: none;
+    text-align: justify;
+}
+/* Navbar */
+.navbar-brand{
+    float: left;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    text-transform: uppercase;
+    line-height: 3em;
+    cursor: pointer;
+    padding: 0 0.5em;
+}
+.navbar-brand:hover{
+    color: rgb(209, 209, 209);
+}
+#menu{
+    display: none;
+}
+.navbar-label{
+    float: right;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 2em;
+    display: none;
+    color: white;
+}
+.navbar-nav{
+    text-align: right;
+}
+.nav-item{
+    display: inline-block;
+    line-height: 3.7em;
+    margin: 0;
+}
+.navbar{
+    height: 3.75em;
+    width: 100%;
+    background-color: rgb(115, 0, 182);
+    padding: 0 40px;
+}
+.nav-link{
+    color: white;
+    font-size: 17px;
+    padding: 1.2em 1em;
+}
+.nav-link:hover{
+    background-color: lightblue;
+}
+@media only screen and (max-width: 800px){
+    .navbar-brand{
+        font-size: 10px;
+        margin-left: 30px;
+        line-height: 50px;
+    }
+    .navbar-label{
+        display: block;
+        cursor: pointer;
+        margin-right: 30px;
+        font-size: 20px;
+    }
+    .navbar-label:hover{
+        color: rgb(209, 209, 209);
+    }
+    .navbar{
+        padding: 0;
+        background-color: black;
+        height: 2.75em;
+    }
+    .navbar-nav{
+        height: 410vh;
+        width: 100%;
+        background-color: black;
+        text-align: center;
+        padding-top: 80px;
+        display: none;
+    }
+    .nav-item{
+        display: block;
+        text-align: center;
+        line-height: 2.7em;
+    }
+    .header{
+        margin-top: 280px;
+    }
+    .nav-link{
+        font-size: 15px;
+    }
+    .nav-link:hover{
+        background-color: black;
+        color: lightblue;
+    }
+    .nav-item:hover{
+        border-left: 6px solid lightblue;
+    }
+    #menu:checked + .navbar-nav{
+        display: block;
+        height: 320px;
+    }
+}
+@media only screen and (max-width: 400px){
+    .navbar-brand{
+        font-size: 5px;
+        margin-left: 20px;
+        line-height: 25px;
+    }
+    .navbar-label{
+        display: block;
+        cursor: pointer;
+        margin-right: 30px;
+        font-size: 10px;
+        line-height: 20px;
+    }
+    .navbar-label:hover{
+        color: rgb(209, 209, 209);
+    }
+    .navbar{
+        padding: 0;
+        background-color: black;
+        height: 2em;
+    }
+    .navbar-nav{
+        height: 150px;
+        width: 100%;
+        background-color: black;
+        text-align: center;
+        display: none;
+        padding-top: 50px;
+    }
+    .nav-item{
+        display: block;
+        text-align: center;
+        line-height: 1.7em;
+        font-size: 10px;
+    }
+    .header{
+        margin-top: 120px;
+        margin-bottom: 20px;
+    }
+    .nav-link{
+        font-size: 8px;
+    }
+    .nav-link:hover{
+        background-color: black;
+        color: lightblue;
+    }
+    .nav-item:hover{
+        border-left: 6px solid lightblue;
+    }
+    #menu:checked + .navbar-nav{
+        display: block;
+        height: 150px;
+    }
+}
+
+/* Header */
+
+.header{
+    display: flex;
+    height: 200px;
+    width: 100%;
+    text-align: justify;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    z-index: -1;
+}
+h1{
+    font-size: 40px;
+    padding: 1em;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+@media only screen and (max-width:860px){
+    .header{
+        height: 70px;
+    }
+    h1{
+        font-size: 20px;
+    }
+}
+@media only screen and (max-width:400px){
+    .header{
+        height: 50px;
+    }
+    h1{
+        font-size: 10px;
+    }
+}
+
+.container{
+    display: inline-flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+/* Pink text boxes */
+.pink-box{
+    width: 32%;
+    padding: 1em;
+    margin: 1em 1em;
+    background-color: pink;
+}
+
+/* Blue text box */
+.blue-cont{
+    padding: 2em;
+    background-color: aliceblue;
+}
+@media only screen and (max-width:800px){
+    .container{
+        display:block;
+    }
+    .pink-box{
+        width: auto;
+
+    }
+    .blue-cont{
+        margin: 0 5px;
+        width: auto;
+    }
+}
+
+/* Images */
+.image{
+    margin: 1em 0.5em;
+    width: 32%;
+}
+.image-cont:first-child{
+    padding-left: 0.5em;
+}
+.image-cont:last-child{
+    padding-right: 0.5em;
+}
+
+/* Footer */
+.foot{
+    color: white;
+    background-color: purple;
+    width: 100%;
+    line-height: 40px;
+    text-align: center;
+}
+.foot-text{
+    text-align: center;
+}
+@media only screen and (max-width:800px){
+    .image{
+        width: 95%;
+    }
+    .image-cont{
+        display: block;
+        margin: 0 5px;
+    }
+}
+@media only screen and (max-width:480px){
+    .foot{
+        line-height: 20px;
+        width: auto;
+    }
+    .foot-text{
+        font-size: 8px;
+    }
+}
