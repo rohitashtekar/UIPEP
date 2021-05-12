@@ -12,60 +12,52 @@
     <title>Welcome | about.me</title>
 </head>
 <body class= "main">
-    <nav class = "nav-bar"> <!--Navigation bar-->
-        <ul class = "left">
-            <li class= "one">
-                <a class="about-tag" href= "https://www.linkedin.com/in/rohit-ashtekar-140536125/" target="_blank">
-                    About.me
-                </a>
-            </li>
-        </ul>
-        <ul class = "right">
-            <li class = "two">
-                <a class="anchor-tag" href= "C:\Users\USER\Documents\GitHub\UIPEP-Internship\UIPEP-W2\locate.html" target="_blank">
-                    Locate
-                </a>
-            </li>
-            <li class = "three">
-                <a class="anchor-tag" href= "C:\Users\USER\Documents\GitHub\UIPEP-Internship\UIPEP-W2\pricing.html" target="_blank">
-                    Pricing
-                </a>
-            </li>
-            <li class = "four">
-                <a class="anchor-tag" href= "C:\Users\USER\Documents\GitHub\UIPEP-Internship\UIPEP-W2\signup.html" target="_blank">
-                    Sign Up
-                </a>
-            </li>
-            <li class = "five">
-                <a class="get-tag" href= "C:\Users\USER\Documents\GitHub\UIPEP-Internship\UIPEP-W2\getfree.html">
-                    Get your own page
-                </a>
-            </li>
-        </ul>
+    <nav class="navbar">
+        <a href="https://www.linkedin.com/in/rohit-ashtekar-140536125/" class="navbar__logo">about.me</a>
+        <label class="navbar__bars" for="menu">&#9776;</label>
+        <input type="checkbox" id="menu" checked>
+        <div class="navbar__menu">
+          <a href="C:\Users\USER\Documents\GitHub\UIPEP-Internship\UIPEP-W2\locate.html" class="navbar__menu--links">Locate</a>
+          <a href="C:\Users\USER\Documents\GitHub\UIPEP-Internship\UIPEP-W2\pricing.html" class="navbar__menu--links">Pricing</a>
+          <a href="C:\Users\USER\Documents\GitHub\UIPEP-Internship\UIPEP-W2\signup.html" class="navbar__menu--links">Sign Up</a>
+          <a href="C:\Users\USER\Documents\GitHub\UIPEP-Internship\UIPEP-W2\getfree.html" class="navbar__menu--links" id="button">Get your own page</a>
+        </div>
     </nav>
 
     <div class= "main-text">
         <div class= "only-text">
             <h1 class= "main-sub">Grow your audience.</br>Get more clients.</h1>
-        <br/>
-        <span class= "sub-text">
-            Create a page to promote who are</br>and what you do in one link.
-        </span>
-        
-        <br/><br/>
-
-        <button href= "#" class="abutton">Grow your business</button>
+            <br/>
+            <p class= "sub-text">
+                Create a page to promote who are</br>and what you do in one link.
+            </p>
+            <div class="ab-cont">
+                <button href= "#" class="abutton">Grow your business</button>
+            </div>
         </div>
         <div class= "side-images">
-            <img class="image image1" src= "C:\Users\USER\Documents\GitHub\UIPEP-Internship\UIPEP-W2\images2\me1.jpg" alt ="It's not me">
-            <img class="image image2" src= "C:\Users\USER\Documents\GitHub\UIPEP-Internship\UIPEP-W2\images2\me2.jpg" alt ="It's someone else">
-            <img class="image image3" src= "C:\Users\USER\Documents\GitHub\UIPEP-Internship\UIPEP-W2\images2\me3.jpg" alt ="Who is it">
+            <div class="only-images">
+                <img class="image image1" src= "C:\Users\USER\Documents\GitHub\UIPEP-Internship\UIPEP-W2\images2\me1.jpg" 
+                alt ="A lady">
+
+                <img class="image image2" src= "C:\Users\USER\Documents\GitHub\UIPEP-Internship\UIPEP-W2\images2\me2.jpg" 
+                alt ="A Programmer">
+                
+                <img class="image image3" src= "C:\Users\USER\Documents\GitHub\UIPEP-Internship\UIPEP-W2\images2\me3.jpg" 
+                alt ="A Gentleman">
+            </div>
+            <div class="only-buttons">
+                <div class="sib-div sb-1">
+                    <button class="sib sib1" type="button">Schedule an appointment</button>
+                </div>
+                <div class="sib-div sb-2">
+                    <button class="sib sib2" type="button">Contact me</button>
+                </div>
+                <div class="sib-div sb-3">
+                    <button class="sib sib3" type="button">Download my paper</button>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="si-but">
-        <button class="sib sib1" type="button">Schedule an appointment</button>
-        <button class="sib sib2" type="button">Contact me</button>
-        <button class="sib sib3" type="button">Download my paper</button>
     </div>
 
     <div class= "features">
@@ -96,10 +88,12 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>  
+
     <div class= "after-feat">
         <a class="afeat-t" href= "#">Explore all about.me features→</a>
     </div>
+
     <div class="end-disp">
         <div class="ed-left edi">
             <img class= "edl-image" src= "C:\Users\USER\Documents\GitHub\UIPEP-Internship\UIPEP-W2\images2\edimg.jpg">
@@ -109,8 +103,10 @@
             <p class= "edl-nsub">
                 Kinesiologist in Fresno,California
             </p>
-            <div class= "edl-but">
-                Schedule an appointment
+            <div class="edl-button">
+                <div class= "edl-but">
+                    Schedule an appointment
+                </div>
             </div>
             <p class="edl-about">
                 <q> Hi, I'm <cite><a href="https://www.youtube.com/channel/UCERm5yFZ1SptUEU4wZ2vJvw">
@@ -125,31 +121,37 @@
             </div>
         </div>
         <div class="ed-right edi">
-            <img class= "edr-img" src= "C:\Users\USER\Documents\GitHub\UIPEP-Internship\UIPEP-W2\images2\edimage1.jpg">
             <div class="edr-box">
-                <h5 class= "edr-name">
-                    Jeremy Ethier
-                </h5>
-                <p class= "edr-nsub">
-                    Kinesiologist in Fresno,California
-                </p>
-                <div class= "edr-but">
-                    Schedule an appointment
+                <div class="img-box">
+                    <img class= "edr-img" src= "C:\Users\USER\Documents\GitHub\UIPEP-Internship\UIPEP-W2\images2\edimage1.jpg">
                 </div>
-                <p class="edr-about">
-                    <q> Hi, I'm <cite><a href="https://www.youtube.com/channel/UCERm5yFZ1SptUEU4wZ2vJvw">
-                    Jeremy Ethier</a></cite> I'm a Kinesiologist and FMS, NASM certified.
-                    I created Built with Science in an effort to "optimize" training 
-                    with methods that are proven and shown through scientific literature
-                    to be the most effective way to train. </q>
-                </p>
-                <div class="edr-icons">
-                    <img src="C:\Users\USER\Documents\GitHub\UIPEP-Internship\UIPEP-W2\images2\ed-icons.jpg" 
-                    style="height:35px;width: 105px;">
+                <div class="edr-lbox">
+                    <h5 class= "edr-name">
+                        Jeremy Ethier
+                    </h5>
+                    <p class= "edr-nsub">
+                        Kinesiologist in Fresno,California
+                    </p>
+                    <div class="edr-button">
+                        <div class= "edr-but">
+                            Schedule an appointment
+                        </div>
+                    </div>
+                    <p class="edr-about">
+                        <q> Hi, I'm <cite><a href="https://www.youtube.com/channel/UCERm5yFZ1SptUEU4wZ2vJvw">
+                        Jeremy Ethier</a></cite> I'm a Kinesiologist and FMS, NASM certified.
+                        I created Built with Science in an effort to "optimize" training 
+                        with methods that are proven and shown through scientific literature
+                        to be the most effective way to train. </q>
+                    </p>
+                    <div class="edr-icons">
+                        <img class="edr-ico" src="C:\Users\USER\Documents\GitHub\UIPEP-Internship\UIPEP-W2\images2\ed-icons.jpg">
+                    </div>
                 </div>
-                </div>
-            </div> 
+            </div>
+        </div> 
     </div>
+
     <div class="entrep">
         <h2>
             Over 1 million entrepreneurs and consultants use about.me.<br/>
