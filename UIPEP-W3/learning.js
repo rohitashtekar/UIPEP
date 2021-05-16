@@ -494,11 +494,11 @@
 //     console.log(city.toUpperCase());
 // });
  
-let person = {
-    adult : false,
-    skills: ['c','c++','Python','HTML','CSS']
-};
-person.skills[2] = "JavaScript";
+// let person = {
+//     adult : false,
+//     skills: ['c','c++','Python','HTML','CSS']
+// };
+// person.skills[2] = "JavaScript";
 
 // console.log(person.adult);
 // console.log(person.skills);
@@ -515,4 +515,195 @@ person.skills[2] = "JavaScript";
 // console.log(person);
 // console.log(typeof(person));
 
+// Computing correlation
+// function phi(table){
+//     return (table[3] * table[0] - table[2] * table[1]) / 
+//             Math.sqrt((table[3] + table[2]) *
+//                       (table[0] + table[1]) *
+//                       (table[1] + table[3]) * 
+//                       (table[0] + table[2]));
+// }
+
+// console.log(phi([76, 9, 4, 1]));
+
+// let journal1 = [];
+
+// function addEntry(events,squirrel){
+//     journal1.push({events,squirrel});
+// }
+
+// addEntry(["work", "touched tree", "pizza", "running",
+//           "television"], false);
+// addEntry(["work", "ice cream", "cauliflower", "lasagna",
+//           "touched tree", "brushed teeth"], false);
+// addEntry(["weekend", "cycling", "break", "peanuts",
+//           "beer"], true);
+
+
+
+// function tableFor(event, journal) {
+//     let table = [0, 0, 0, 0];
+//     for (let i = 0; i < journal.length; i++) {
+//       let entry = journal[i], index = 0;
+//       if (entry.events.includes(event)) index += 1;
+//       if (entry.squirrel) index += 2;
+//       table[index] += 1;
+//     }
+//     return table;
+// }
+  
+
+// console.log(tableFor("pizza",JOURNAL))
+
+// let line = "Hello, \nI am an Intern";
+// console.log(line.slice(0,5));
+// console.log(line.lastIndexOf("n"));
+// console.log(line.trim()); doesnt work
+
+// let line = "ro";
+// console.log(line.padStart(6,0))
+
+// let line = "Hello I am an Intern";
+// line = line.split(" ");
+// console.log(line)
+// console.log(line.join("."))
+
+// let sentence = "hello"
+// console.log("hell ".repeat(3));
+// console.log(Math.min(121,323,456,123,114,55));
+// console.log(Math.max(121,323,456,123,114,55));
+// console.log(Math.PI);
+// console.log(Math.random());
+// console.log(Math.round(3.141592653589793));
+
+// let {name} = {name: "Ro", age: 23};
+// console.log(name);
+
+//JSON
+// let words = {
+//     squirrel : false,
+//     events : ["hello","world","whats","up"]
+// };
+
+// words = JSON.stringify(words)
+
+// console.log(words);
+
+// console.log(JSON.parse(words))
+
+// Write a range function that takes two arguments, start and end, 
+// and returns an array containing all the numbers from start up to (and including) end.
+
+// Next, write a sum function that takes an array of numbers and returns the sum of these numbers.
+// Run the example program and see whether it does indeed return 55.
+// function range(start,end){
+//     let num = [];
+//       for(let i = start; i <= end; i++){
+//             num.push(i);
+//       }
+//     return num;
+// }
+
+// function sum(numbers){
+// 	let result = 0;
+//   	for(let i = numbers[0]; i <= numbers.length; i++){
+//     	result += i;
+//     }
+// 	return result;
+// }
+
+// function range(start, end, step) {
+//     let num = [];
+//     if(step === undefined) step = 1;
+//     if(step >= 0){
+//         for(let i=start; i<=end; i+=step) {
+//             num.unshift(i);
+//             return num;
+//         }
+//         return num;
+//     }
+//     else{
+//         for(let i=end; i>=start; i+=step) {
+//             num.unshift(i);
+//             return num;
+//         }
+//         return num;
+//     }
+
+//   }
+//   console.log(range(5, 2,-1));
+
+// function reverseArray(string){
+// 	let result = [];
+//   	for(let i = string.length-1;i !== -1; i--){
+//     	result.push(string[i]);
+//     }
+//   	return result;
+// }
+// function reverseArrayInPlace(string){
+//      let start = 0;
+//       let end = (string.length)-1;
+//       let temp;
+//   if(string.length % 2 === 0){
+//       while(start < end){
+//       temp = string[start];
+//       string[start] = string[end];
+//       string[end] = temp;
+
+//       start ++;
+//       end--;
+//     }
+// }	
+//   else{
+//     while(start !== end){
+//       temp = string[start];
+//       string[start] = string[end];
+//       string[end] = temp;
+
+//       start ++;
+//       end--;
+//     }
+// }
+// }
+
+// let arrayValue = [1, 2, 3, 4, 5,6,7];
+// reverseArrayInPlace(arrayValue);
+// console.log(arrayValue);
+// →[5, 4, 3, 2, 1]
+ 
+// function arrayToList(arr){
+// 	let list = null;	
+//   	for(i = arr.length-1; i >= 0; i--){
+//     	list = {value : arr[i], rest : list}
+//     }
+//   	return list;
+// }
+
+// function listToArray(list){	
+//   	let arr = [];
+//   	for(let node = list; node; node = node.rest){
+//     	arr.push(node.value);
+//     }
+//   	return arr;
+// }
+// function prepend(val,res){
+// 	return {value : val, rest : res}
+// }
+// function nth(list,n){
+// 	if(n === 0){
+//     	return list.value;
+//     }
+//   	else{
+//     	return nth(list.rest, n - 1);
+      
+//     }
+// }
+
+// console.log(arrayToList([10, 20]));
+
+// console.log(listToArray(arrayToList([10, 20, 30])));
+
+// console.log(prepend(10, prepend(20, null)));
+
+// console.log(nth(arrayToList([10, 20, 30]), 0));
 
