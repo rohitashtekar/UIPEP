@@ -810,17 +810,60 @@ const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
 // console.log(combined);
 
 // The secret life of objects-------
-function speak(line){
-    console.log(`The ${this.type} Rabbit says "${line}"`);
-};
+// function speak(line){
+//     console.log(`The ${this.type} Rabbit says "${line}"`);
+// };
 
-let whiteRabbit = {type : "white", speak};
-let hungryRabbit = {type : "hungry", speak};
+// let whiteRabbit = {type : "white", speak};
+// let hungryRabbit = {type : "hungry", speak};
 
-whiteRabbit.speak("What is this on my fur" + ", I think there is a bug on me");
-hungryRabbit.speak("I need food ASAP");
+// whiteRabbit.speak("What is this on my fur" + ", I think there is a bug on me");
+// hungryRabbit.speak("I need food ASAP");
 
-speak.call(whiteRabbit, "Please dont bite me");
-speak.call(hungryRabbit, "uhmmm, tastes good");
+// speak.call(whiteRabbit, "Please dont bite me");
+// speak.call(hungryRabbit, "uhmmm, tastes good");
+
+// prototype------
+// let protoRabbit = {
+//     speak(line){
+//         console.log(`The ${this.type} Rabbit says ${line}`);
+//     }
+// };
+
+// let killerRabbit = Object.create(protoRabbit);
+// killerRabbit.type = "killer";
+// killerRabbit.speak = "I am stealthy and quick!";
+
+// console.log(killerRabbit);
+
+// function Rabbit(breed){
+//     this.type = breed;
+// }
+// Rabbit.prototype.speak = function(line){
+//     console.log(`The ${this.type} Rabbit says ${line + " hehe"}`);
+// }
+
+// let weirdRabbit = new Rabbit("weird");
+
+// class Declaration-----
+
+class Rabbit{
+    constructor(breed){
+        this.type = breed;
+    }
+    speak(line){
+        console.log(`The ${this.type} rabbit says ${line}`);
+    }
+}
+
+let killerRabbit = new Rabbit("killer");
+let tinyRabbit = new Rabbit("tiny");
+
+console.log(killerRabbit.speak("wtf"));
+console.log(tinyRabbit.speak("I am tiny"));
+
+// let object = new class { getWord(){ return "Hello";}};
+// console.log(object.getWord());
+
 
 
