@@ -24,7 +24,7 @@
 // //     console.log(string)
 // // }
 
-// //Generic function
+//Generic function------
 
 // function yellIt(string){
 //     string = string.toUpperCase()
@@ -47,7 +47,7 @@
 
 // console.log(myCatBuddies.length)
 
-// //Object called person
+//Object called person-----
 
 // var person = {
 //     name: "Rohit",
@@ -67,7 +67,7 @@
 // console.log(person.address);
 // console.log(person.address.pin);
 
-// //Functions within Objects
+//Functions within Objects------
 
 // var dog = {
 //     owner: "Rohit",
@@ -100,11 +100,11 @@
 // console.log(me.address.pin);
 // console.log(me)
 
-// //Objects inside an array
+//Objects inside an array-----
 
 // var arr = [{date: "13-05-2021", mission: "Accomplished"},{location: "Dubai", target: "Eliminated"}];
 
-// //Arrays inside an Object
+//Arrays inside an Object--------
 
 // var geo = {
 //     locations: ["India", "Sri-Lanka", "Nepal", "Bhutan", "Tibet"], 
@@ -114,7 +114,7 @@
 // console.log(arr);
 // console.log(geo);
 
-// //Functions
+//Functions-------
 
 // var something = 1;
 // function add(someNumber){
@@ -133,7 +133,7 @@
 // logOutDetails(homeCity, myArea, myState);
 // logOutDetails("Bgm","Shahpur","Kerela");
 
-// //Values, Numbers and Operators
+//Values, Numbers and Operators---------
 
 // add = 5 + 4;
 // sub = 100-54;
@@ -493,7 +493,9 @@
 // myCities.forEach(function(city){
 //     console.log(city.toUpperCase());
 // });
- 
+
+// 15th may--------------------------- 
+
 // let person = {
 //     adult : false,
 //     skills: ['c','c++','Python','HTML','CSS']
@@ -515,7 +517,7 @@
 // console.log(person);
 // console.log(typeof(person));
 
-// Computing correlation
+// Computing correlation---------
 // function phi(table){
 //     return (table[3] * table[0] - table[2] * table[1]) / 
 //             Math.sqrt((table[3] + table[2]) *
@@ -706,4 +708,119 @@
 // console.log(prepend(10, prepend(20, null)));
 
 // console.log(nth(arrayToList([10, 20, 30]), 0));
+
+// function repeat( n, action){
+//     for(let i = 0; i < n; i++){
+//         action(i);
+//     }
+// }
+// repeat(5, console.log);
+
+// let labels = [];
+// repeat(5, i => {
+//     labels.push(`Unit ${i + 1}`);
+// });
+// console.log(labels);
+
+//Higher order Functions-------
+// function greaterThan(n){
+//     return m => m > n;
+// }
+
+// let greaterThan50 = greaterThan(50);
+// console.log(greaterThan50(55));
+
+// forEach-------
+// let arr = [1,2,3,4,5,2354,546,2,123,45,67,2,78,2345,4578,8,9,67,3,23,21,124,5,3,11,44,5];
+// arr.forEach(function(array){
+//     console.log(array);
+// });
+
+//companies Data---------
+const companies = [
+    {name: "Company One", category: "Finance", start: 1981, end: 2003},
+    {name: "Company Two", category: "Retail", start: 1992, end: 2008},
+    {name: "Company Three", category: "Auto", start: 1999, end: 2007},
+    {name: "Company Four", category: "Retail", start: 1989, end: 2010},
+    {name: "Company Five", category: "Technology", start: 2009, end: 2014},
+    {name: "Company Six", category: "Finance", start: 1987, end: 2010},
+    {name: "Company Seven", category: "Auto", start: 1986, end: 1996},
+    {name: "Company Eight", category: "Technology", start: 2011, end: 2016},
+    {name: "Company Nine", category: "Retail", start: 1981, end: 1989}
+];
+  
+const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
+
+//filter-------
+// const newArr = arr.filter(num => num > 2);
+// console.log(newArr);
+
+// let newArr = arr.filter(function(numbers){
+//     if(numbers > 5 ){
+//         return true;
+//     }
+// });
+
+// let newArr = arr.filter(numbers => numbers > 100);
+// console.log(newArr);
+
+// map------
+// let arrays = [[1, 2, 3], [4, 5], [6]];
+// let newArr = arrays.map(function (array){
+//         return `${array}`;
+// });
+// console.log(newArr);
+
+// let newArr = companies.map(function(company){
+//     return `${company.name} [${company.start} - ${company.end}]`;
+// });
+// console.log(newArr);
+
+// let newArr = companies.map(company => `${company.name} [${company.start} - ${company.end}]`);
+// console.log(newArr);
+
+// reduce-------
+// let newArray = arrays.reduce((array1,array2) => array1.concat(array2));
+// console.log(newArray);
+
+// function loop(value, test, update, body){
+//     for(let i = value; test(i); i = update(i)){
+//         body(i);
+//     }
+// }
+// loop(7, n => n > 0, n => n - 1, console.log);
+
+// let age = companies.reduce(function(start,end){
+//     let age = end - start;
+//     return age; 
+// });
+// console.log(ages);
+
+// let ageSum = ages.reduce(function(age,sum){
+//     return sum + age;
+// });
+// console.log(ageSum);
+
+// const combined = ages
+//     .map(age => age * 2)
+//     .filter(age => age >= 40)
+//     .sort((a, b) => a - b)  
+//     .reduce((a,b) => a + b, 0);
+
+// console.log(combined);
+
+// The secret life of objects-------
+function speak(line){
+    console.log(`The ${this.type} Rabbit says "${line}"`);
+};
+
+let whiteRabbit = {type : "white", speak};
+let hungryRabbit = {type : "hungry", speak};
+
+whiteRabbit.speak("What is this on my fur" + ", I think there is a bug on me");
+hungryRabbit.speak("I need food ASAP");
+
+speak.call(whiteRabbit, "Please dont bite me");
+speak.call(hungryRabbit, "uhmmm, tastes good");
+
 
