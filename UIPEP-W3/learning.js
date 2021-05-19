@@ -859,11 +859,170 @@ class Rabbit{
 let killerRabbit = new Rabbit("killer");
 let tinyRabbit = new Rabbit("tiny");
 
-console.log(killerRabbit.speak("wtf"));
-console.log(tinyRabbit.speak("I am tiny"));
+// console.log(killerRabbit.speak("I am Dangerous"));
+// console.log(tinyRabbit.speak("I am tiny"));
 
 // let object = new class { getWord(){ return "Hello";}};
 // console.log(object.getWord());
 
+// Rabbit.prototype.teeth = "small";
+// console.log(tinyRabbit.teeth);
 
+// killerRabbit.teeth = "long sharp and bloody";
+// console.log(killerRabbit.teeth);
+
+// console.log(Rabbit.prototype.teeth);
+
+// let employees = new Map();
+// employees.set("Boris", 29);
+// employees.set("Roxanne", 43);
+// employees.set("Judy", 51);
+
+// console.log(`Roxanne is ${employees.get("Roxanne")}`);
+// console.log("Is Jacks age known?", employees.has("Jack"));
+
+// Polymorphism------
+// Rabbit.prototype.toString = function(){
+//     return `A ${this.type} rabbit`;
+// }
+
+// console.log(String(killerRabbit));
+
+// let sym = Symbol("name");
+// console.log(sym === Symbol("name")); //false
+
+// const toStringSymbol = Symbol("toString");
+// Array.prototype[toStringSymbol] = function(){
+//     return `${this.length} cm of blue yarn`;
+// };
+
+// console.log([1,2,3,4,5].toString());
+// console.log([5,4,3,2,1,6,7][toStringSymbol]());
+
+// let stringObject = {
+//     [toStringSymbol]() { return "A jute bag";}
+// };
+// console.log(stringObject[toStringSymbol]());
+
+// class Animal {
+//     constructor(name) {
+//         this.name = name;
+//     }
+//     eats(){
+//         console.log(`${this.name} eats Food`);
+//     }
+
+// }
+// class Cat extends Animal{
+//     eats(){
+//         console.log(`${this.name} eats fish`);
+//     }
+// }
+// class Dog extends Animal{
+     // super.eats();
+// }
+
+
+// let cat = new Cat('bella');
+// console.log(`My name is ${cat.name}`);
+// cat.eats();
+
+// let dog = new Dog('Kayla');
+// dog.eats();
+
+// let okIterator = "OKAY"[Symbol.iterator]();
+// console.log(okIterator.next());
+// console.log(okIterator.next());
+// console.log(okIterator.next());
+// console.log(okIterator.next());
+// console.log(okIterator.next());
+
+// getters, setters
+
+// let varyingSize = {
+//     get size(){
+//         return Math.floor(Math.random() * 100);
+//     }
+// };
+
+// console.log(varyingSize.size);
+
+// class Temperature{
+//     constructor(celsius){
+//         this.celsius = celsius;
+//     }
+
+//     get fahrenheit(){
+//         return this.celsius * 1.8 + 32;
+//     }
+
+//     set fahrenheit(value){
+//         this.celsius = (value - 32) / 1.8;
+//     }
+
+//     static fromFahrenheit(value){
+//         return new Temperature((value - 32) / 1.8);
+//     }
+// }
+
+// let temp = new Temperature(22);
+// console.log(temp.fahrenheit);
+
+// temp.fahrenheit = 86;
+// console.log(temp.celsius);
+
+// console.log(Temperature.fromFahrenheit(98));
+
+// Matrix using iterator--------
+class Matrix {
+  constructor(width, height, element = (x, y) => undefined) {
+    this.width = width;
+    this.height = height;
+    this.content = [];
+
+    for (let y = 0; y < height; y++) {
+      for (let x = 0; x < width; x++) {
+        this.content[y * width + x] = element(x, y);
+      }
+    }
+  }
+
+  get(x, y) {
+    return this.content[y * this.width + x];
+  }
+  set(x, y, value) {
+    this.content[y * this.width + x] = value;
+  }
+}
+
+class MatrixIterator {
+  constructor(matrix) {
+    this.x = 0;
+    this.y = 0;
+    this.matrix = matrix;
+  }
+
+  next() {
+    if (this.y == this.matrix.height) return {done: true};
+
+    let value = {x: this.x,
+                 y: this.y,
+                 value: this.matrix.get(this.x, this.y)};
+    this.x++;
+    if (this.x == this.matrix.width) {
+      this.x = 0;
+      this.y++;
+    }
+    return {value, done: false};
+  }
+}
+
+Matrix.prototype[Symbol.iterator] = function(){
+    return new MatrixIterator(this);
+}
+
+let matrix = new Matrix(4, 4, (x, y) => `value ${x},${y}`);
+for (let {x, y, value} of matrix) {
+    console.log(x, y, value);
+}
 
