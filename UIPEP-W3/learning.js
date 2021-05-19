@@ -888,11 +888,6 @@ let tinyRabbit = new Rabbit("tiny");
 
 // console.log(String(killerRabbit));
 
-// Rabbit.prototype.toString = function(){
-//     return `Overwritten ${this.type} rabbit`;
-// }
-// console.log(String(killerRabbit));
-
 // let sym = Symbol("name");
 // console.log(sym === Symbol("name")); //false
 
@@ -902,8 +897,6 @@ let tinyRabbit = new Rabbit("tiny");
 // };
 
 // console.log([1,2,3,4,5].toString());
-// console.log(typeof([1,2,3,4,5].toString()));
-
 // console.log([5,4,3,2,1,6,7][toStringSymbol]());
 
 // let stringObject = {
@@ -918,17 +911,15 @@ let tinyRabbit = new Rabbit("tiny");
 //     eats(){
 //         console.log(`${this.name} eats Food`);
 //     }
-// }
 
+// }
 // class Cat extends Animal{
 //     eats(){
 //         console.log(`${this.name} eats fish`);
 //     }
 // }
 // class Dog extends Animal{
-//     supereat(){
-//         super.eats();
-//     }
+     // super.eats();
 // }
 
 
@@ -937,7 +928,7 @@ let tinyRabbit = new Rabbit("tiny");
 // cat.eats();
 
 // let dog = new Dog('Kayla');
-// console.log(dog.eats());
+// dog.eats();
 
 // let okIterator = "OKAY"[Symbol.iterator]();
 // console.log(okIterator.next());
