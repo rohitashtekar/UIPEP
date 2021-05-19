@@ -1021,8 +1021,26 @@ Matrix.prototype[Symbol.iterator] = function(){
     return new MatrixIterator(this);
 }
 
-let matrix = new Matrix(4, 4, (x, y) => `value ${x},${y}`);
-for (let {x, y, value} of matrix) {
-    console.log(x, y, value);
-}
+// let matrix = new Matrix(4, 4, (x, y) => `value ${x},${y}`);
+// for (let {x, y, value} of matrix) {
+//     console.log(x, y, value);
+// }
 
+class SymmetricMatrix extends Matrix {
+    constructor(size, element = (x, y) => undefined) {
+      super(size, size, (x, y) => {
+        if (x < y) return element(y, x);
+        else return element(x, y);
+      });
+    }
+  
+    set(x, y, value) {
+      super.set(x, y, value);
+      if (x != y) {
+        super.set(y, x, value);
+      }
+    }
+  }
+  
+  let matrix = new SymmetricMatrix(5, (x, y) => `${x},${y}`);
+  console.log(matrix.get(1, 3));
