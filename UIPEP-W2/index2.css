@@ -36,7 +36,7 @@
 
 .navbar__logo:hover {
     color: white;
-    border-radius: 8px;
+    border-radius: 4px;
     background-color: rgb(37, 149, 184);
     box-shadow: 2px 4px 8px rgb(82, 163, 152);
 }
@@ -101,7 +101,7 @@
     color: white;
     background-color: rgb(37, 149, 184);
     padding: 0.8rem 1rem;
-    border-radius: 8px;
+    border-radius: 4px;
     box-shadow: 2px 4px 8px rgb(82, 163, 152);
 }
 

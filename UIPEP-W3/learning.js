@@ -411,7 +411,7 @@
 
 // console.log(fact(0));
 
-// const number = parseInt(prompt('Enter the number of terms:'));
+// const number = Number(prompt('Enter the number of terms:'));
 
 // let num1 = 0, num2 = 1, nextTerm;
 
@@ -494,7 +494,7 @@
 //     console.log(city.toUpperCase());
 // });
 
-// 15th may--------------------------- 
+//--------------------------- 
 
 // let person = {
 //     adult : false,
