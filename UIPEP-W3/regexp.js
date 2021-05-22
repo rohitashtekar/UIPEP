@@ -137,7 +137,7 @@
 // let string = "dog, cat, bird, fish";
 // console.log(string.replace(/bird, fish/g, "hamster"));
 
-let string = "I have 1 brothers, 8 cousins and 0 sisters";
-let regex = /\b\d+\b/g;
-let result = string.match(regex);
-console.log(`Brothers: ${result[0]} \nCousins: ${result[1]} \nSisters: ${result[2]}`);
+// let string = "I have 1 brothers, 8 cousins and 0 sisters";
+// let regex = /\b\d+\b/g;
+// let result = string.match(regex);
+// console.log(`Brothers: ${result[0]} \nCousins: ${result[1]} \nSisters: ${result[2]}`);
