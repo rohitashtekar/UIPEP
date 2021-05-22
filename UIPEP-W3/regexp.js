@@ -105,20 +105,39 @@
 // let regex = /\+[0-9]{1,3}\s[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]/;
 // console.log(regex.test("+91 7795476167"));
 
-// let regex = /\+\d{2,3}\s\d{10,10}$/;
+// let regex = /\+\d{2,3}[\s]?\d{10,10}$/;
 // function check(question){    
 //     console.log(regex.test(prompt(question)));  
 // };
 
 // check("Enter Phone number: ");
 
-// let regex = /.+/;
-// console.log(regex.test("enter anything any alphabet any number any number of times"));
+// let regex = /^.+$/i;
+// console.log("enter anything any alphabet any number any number of times".match(regex));
 
-// let regex = /male|female|other/i;
+// let regex = /^male|^female|^other/i;
 // function check(question){    
 //     console.log(regex.test(prompt(question)));  
 // };
-
 // check("Enter Gender: ");
 
+// let string = "There is a beatiful planet called earth.There is no other planet like earth";
+// let regex = /there[\s]?(?=is)/gi;
+// console.log(string.match(regex));
+
+// let constant = "6.674";
+// let regex = /\d+(?!\.)/g;
+// console.log(regex.exec(constant));
+
+// let pictureDesc = "This is a picture with dimensions 400 by 300" 
+// let regex = /([0-9]{1,})[\s]?by[\s]?([0-9]{1,})/;
+// let result = pictureDesc.match(regex);
+// console.log(`x-axis: ${result[1]}, y-axis: ${result[2]}`);
+
+// let string = "dog, cat, bird, fish";
+// console.log(string.replace(/bird, fish/g, "hamster"));
+
+let string = "I have 1 brothers, 8 cousins and 0 sisters";
+let regex = /\b\d+\b/g;
+let result = string.match(regex);
+console.log(`Brothers: ${result[0]} \nCousins: ${result[1]} \nSisters: ${result[2]}`);
