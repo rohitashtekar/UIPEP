@@ -1,0 +1,150 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+    background-image: url(/images/bg5.jpg);
+    background-repeat: no-repeat;
+}
+
+/* navigation bar */
+
+.navbar {
+    background-color: rgba(0,0,0,0.4);
+    line-height: 3.5rem;
+    height: 3.5rem;
+}
+
+.nav-item {
+    transition-duration: 0.2s;
+    padding: 0 0.5rem;
+}
+
+.nav-item:hover {
+    background-color: rgb(24, 54, 70);;
+}
+
+.logo {
+    float: left;
+    margin-left: 2rem;
+    font-size: 1.6rem;
+}
+
+.about {
+    float: right;
+    margin-right: 2rem;
+    font-size: 1.2rem;
+}
+
+.about-link {
+    color: white;
+    text-decoration: none;
+    padding: 0.7rem;
+}
+
+.logo-text{
+    color: white;
+    font-family: monospace;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+    padding: 0 0.5rem;
+}
+
+/* content */
+
+.container {
+    margin: 4rem 3rem;
+}
+
+.heading {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: 0.1rem solid white;
+}
+
+.heading-text {
+    color: white;
+    width: fit-content;
+    opacity: 0.9;
+    padding: 1rem;
+}
+
+.date {
+    text-align: center;
+    padding: 0.5rem 0;
+    color: white;
+
+    opacity: 0.8;
+}
+
+/* quotes */
+.main-disp {
+    margin: 2rem 2rem 2rem 2rem;
+}
+
+#quoteDisplay {
+    color: white;
+    opacity: 0.8;
+    padding: 3rem 5rem;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    height: 15rem;
+}
+
+.copy-but{
+    float: right;
+    padding: 1rem;
+    color: white;
+    box-shadow: 0rem 0.2rem 1rem rgb(0, 0, 0);
+    background-color: black;
+    border: none;
+    transition-duration: 0.2s;
+    border-radius: 0.3rem;
+}
+
+.copy-but:hover {
+    color: black;
+    background-color: white;
+}
+
+.but-cont {
+    display: flex;
+    justify-content: center;
+    margin: 3rem 0;
+}
+
+.button {
+    color: white;
+    opacity: 0.8;
+    background-color: black;
+    border: 0.1rem solid black;
+    box-shadow: 0rem 0.2rem 1rem rgb(0, 0, 0);
+    border-radius: 0.3rem;
+    display: inline-block;
+    padding: 16px 32px;
+    margin: 4px 2px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+.button:hover {
+    background-color: white; 
+    color: black;
+}
+
+.footer {
+    color: white;
+    text-align: center;
+    margin: 4rem 0 0 0;
+}
