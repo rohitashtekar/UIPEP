@@ -27,5 +27,21 @@ function newQuote(){
     document.getElementById('quoteDisplay').innerHTML = quoteArray[randomNum];
 }
 
+// let copyButton = document.querySelector('.copy-but');
+// copyButton.addEventListener('click',function(){
+    
+// })
+
 let navigation = document.querySelector('.navbar');
 navigation.style.backgroundColor = 'black';
+
+let copyBtn = document.querySelector('.copy-but');
+copyBtn.addEventListener('click',function(){
+    alert("Text copied");
+})
+
+document.querySelector('.logo').addEventListener('click', function(event) {
+    if (event.target.tagN === 'logo-text') {
+        alert(`You clicked on ${event.target.innerText}`);
+    }
+});
