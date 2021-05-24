@@ -129,15 +129,23 @@
 // let regex = /\d+(?!\.)/g;
 // console.log(regex.exec(constant));
 
-// let pictureDesc = "This is a picture with dimensions 400 by 300" 
+// let boxDesc = "This is a box with dimensions 400 by 300" 
 // let regex = /([0-9]{1,})[\s]?by[\s]?([0-9]{1,})/;
-// let result = pictureDesc.match(regex);
+// let result = boxDesc.match(regex);
 // console.log(`x-axis: ${result[1]}, y-axis: ${result[2]}`);
 
 // let string = "dog, cat, bird, fish";
 // console.log(string.replace(/bird, fish/g, "hamster"));
 
-// let string = "I have 1 brothers, 8 cousins and 0 sisters";
+// let string = "I have 1 brother, 8 cousins and 0 sisters";
 // let regex = /\b\d+\b/g;
 // let result = string.match(regex);
 // console.log(`Brothers: ${result[0]} \nCousins: ${result[1]} \nSisters: ${result[2]}`);
+
+// let string = "I have 01 brother, 08 cousins and 00 sisters";
+// let regex = /\b\d+\b/g;
+// let result;
+
+// while(result = regex.exec(string)){
+//     console.log(`Match found ${result[0]} at ${result.index}`);
+// }

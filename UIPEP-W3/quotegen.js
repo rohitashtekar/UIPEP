@@ -27,3 +27,5 @@ function newQuote(){
     document.getElementById('quoteDisplay').innerHTML = quoteArray[randomNum];
 }
 
+let navigation = document.querySelector('.navbar');
+navigation.style.backgroundColor = 'black';
