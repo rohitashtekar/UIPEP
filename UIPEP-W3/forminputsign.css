@@ -243,3 +243,62 @@ html {
 .ff-link {
     color: rgb(231, 231, 231);
 }
+
+/* Media Queries */
+@media screen and (max-width: 920px){
+    * {
+        font-size: 1rem;
+    }
+    .logo-nav,.signup-nav{
+        font-size: 0.2  rem;
+    }
+    .form-container {
+        width: 100%;
+    }
+    .signup-head {
+        font-size: 1rem;
+    }
+    .input {
+        width: 100%;
+        flex-direction: column;
+        margin-left: 0;
+        margin-right: 0;
+        font-size: 0.8rem;
+    }
+    .input-container,.gender-container {
+        flex-direction: column;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .gender-head {
+        font-size: 0.8rem;
+    }
+    .gender-radio {
+        display: inline-flex;
+    }
+    .gender-input {
+        height: 1.5rem;
+    }
+    .radio {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        font-size: 0.5rem;
+    }
+    .age-email {
+        width: 100%;
+        flex-direction: column;
+    }
+    .phone {
+        flex-direction: column;
+    }
+    .login-but {
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width: 400px){
+    * {
+        font-size: 0.5rem;
+    }
+}

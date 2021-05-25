@@ -169,3 +169,27 @@ html {
 .ff-link {
     color: rgb(255, 255, 255);
 }
+
+/* Media Queries */
+@media screen and (max-width: 1020px){
+    * {
+        font-size: 0.8rem;
+    }
+    .form-container {
+        width: 60%;
+    }
+    .login-but,.input,.login {
+        font-size: 0.8rem;
+    }
+}
+@media screen and (max-width: 400px){
+    * {
+        font-size: 0.7rem;
+    }
+    .form-container {
+        width: 100%;
+    }
+    .login-but,.input,.login {
+        font-size: 0.5rem;
+    }
+}

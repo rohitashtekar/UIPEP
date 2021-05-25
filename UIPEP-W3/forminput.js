@@ -4,7 +4,7 @@ let usernameReg = /^[\w]{6,}[^\s\!\@\#\$\%\^\&\*\(\)\=\[\]\{\}\;\:\"\'\<\>]*$/;
 let password = document.querySelector('.password-input');
 let passwordReg = /^[^\(\)\=\[\]\{\}\;\:\"\'<>][a-zA-Z0-9]{8,}/;
 
-let validityText = document.querySelector('.validity')
+// let validityText = document.querySelector('.validity')
 
 function Invalid(input){
     input.classList.add('invalid');
