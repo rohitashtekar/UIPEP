@@ -113,12 +113,23 @@ html {
     color: black;
 }
 
+.input::placeholder {
+    color: rgb(156, 156, 156);
+}
+
 .input:focus::-webkit-input-placeholder {
     opacity: 0;
 }
-
 .input:focus::-moz-placeholder {
     opacity: 0;
+}
+
+.input.invalid{
+    border: 0.15rem solid red !important;
+}
+
+.input.valid{
+    border: 0.15rem solid limegreen !important;
 }
 
 .fname-input {
@@ -226,9 +237,9 @@ html {
 }
 
 .ff-text{
-    color: rgb(194, 194, 194);
+    color: rgb(175, 175, 175);
 }
 
 .ff-link {
-    color: rgb(219, 219, 219);
+    color: rgb(231, 231, 231);
 }
