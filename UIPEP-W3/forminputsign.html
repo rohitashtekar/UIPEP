@@ -17,73 +17,73 @@
             <a href="forminput.html" class="signup-link">Login</a>
         </div>
     </div>
-
+   
     <div class="container">
         <div class="form-container">
             <div class="inputs">
+                <form action="/" class="form-get" method="GET">
+                    <div class="head">
+                        <p class="signup-head">Sign Up</p>
+                    </div>
+                    
+                    <div class="name input-container">
+                        <input type="text" class="fname-input input" placeholder="First Name" required>
+                        <input type="text" class="lname-input input" placeholder="Last Name" required>
+                    </div>
+                    
+                    <div class="gender-container">
+                        <div class="radio-options">
+                            <div class="gender-heading">
+                                <p class="gender-head">Gender:</p>
+                            </div>
 
-                <div class="head">
-                    <p class="signup-head">Sign Up</p>
-                </div>
-
-                <div class="name input-container">
-                    <input type="text" class="fname-input input" placeholder="First Name" required>
-                    <input type="text" class="lname-input input" placeholder="Last Name" required>
-                </div>
-                
-                <div class="gender-container">
-                    <div class="radio-options">
-                        <div class="gender-heading">
-                            <p class="gender-head">Gender :</p>
+                            <div class="gender-radio">
+                                <label class="radio1 radio" for="male">
+                                    <input type="radio" class="gender-input" name="gender" value="Male">
+                                    <!-- <div class="radio-button"></div> -->
+                                    Male
+                                </label>
+                                <label class="radio2 radio" for="female">
+                                    <input type="radio" class="gender-input" name="gender" value="Female">
+                                    <!-- <div class="radio-button"></div> -->
+                                    Female
+                                </label>
+                                <label class="radio3 radio" for="disclose">
+                                    <input type="radio" class="gender-input" name="gender" value="Disclose" checked>
+                                    <!-- <div class="radio-button"></div> -->
+                                    Choose not to Disclose
+                                </label>
+                            </div>
                         </div>
-
-                        <div class="gender-radio">
-                            <label class="radio1 radio" for="male">
-                                <input type="radio" class="gender-input" name="gender" value="Male">
-                                <!-- <div class="radio-button"></div> -->
-                                Male
-                            </label>
-                            <label class="radio2 radio" for="female">
-                                <input type="radio" class="gender-input" name="gender" value="Female">
-                                <!-- <div class="radio-button"></div> -->
-                                Female
-                            </label>
-                            <label class="radio3 radio" for="disclose">
-                                <input type="radio" class="gender-input" name="gender" value="Disclose" checked>
-                                <!-- <div class="radio-button"></div> -->
-                                Choose not to Disclose
-                            </label>
+                    </div>
+                    
+                    <div class="personal-container">
+                        <div class="age-email input-container">
+                            <input type="text" class="age-input input" placeholder="Age">
+                            <input type="text" class="email-input input" placeholder="Enter E-mail ID" required>
                         </div>
                     </div>
-                </div>
-                
-                <div class="address-container">
-                    <div class="age-email input-container">
-                        <input type="text" class="age-input input" placeholder="Age" required>
-                        <input type="text" class="email-input input" placeholder="Enter E-mail ID" required>
+
+                    <div class="phone input-container">
+                        <input type="text" class="cc-input input" placeholder="Code(+91)" required>
+                        <input type="text" class="phone-input input" placeholder="Enter phone number" required>
                     </div>
-                </div>
 
-                <div class="phone input-container">
-                    <input type="text" class="cc-input input" placeholder="Code(+91)" required>
-                    <input type="text" class="phone-input input" placeholder="Enter phone number" required>
-                </div>
-
-                <div class="username input-container">
-                    <input type="text" class="username-input input" placeholder="Set Username" required>
-                </div>
-
-                <div class="password input-container">
-                    <input type="password" class="passone-input input" placeholder="Enter Password" required>
-                    <input type="password" class="passtwo-input input" placeholder="Confirm Password" required>
-                </div>
-
-                <div class="button-container">
-                    <div button class="login-but">
-                        Sign Up
+                    <div class="username input-container">
+                        <input type="text" class="username-input input" placeholder="Set Username" required>
                     </div>
-                </div>
 
+                    <div class="password input-container">
+                        <input type="password" class="passone-input input" placeholder="Enter Password" required>
+                        <input type="password" class="passtwo-input input" placeholder="Confirm Password" required>
+                    </div>
+
+                    <div class="button-container">
+                        <button class="login-but" type="submit">
+                            Sign Up
+                        </button>
+                    </div>
+            </form>
                 <div class="form-footer">
                     <div class="ff-text">
                         Already a member&#63; <a href="forminput.html" class="ff-link">Login</a>

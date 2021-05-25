@@ -87,7 +87,7 @@ html {
     font-weight: bold;
 }
 
-.form {
+.form-input {
     display: flex;
     flex-direction: column;
     padding: 2rem;
@@ -95,10 +95,10 @@ html {
 
 .input {
     font-size: 1.4rem;
-    border: none;
+    border: 0.1rem solid black;
     border-radius: 0.2rem;
     width: 100%;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     padding: 1rem;
     background-color: rgba(255, 255, 255, 0.8);
     color: black;
@@ -117,11 +117,15 @@ html {
 }
 
 .input.invalid{
-    border: 0.15rem solid red !important;
+    border-color: red !important;
 }
 
 .input.valid{
-    border: 0.15rem solid limegreen !important;
+    border-color: limegreen !important;
+}
+
+.password-input {
+    margin-top: 1rem;
 }
 
 .button-container {
@@ -159,9 +163,9 @@ html {
 }
 
 .ff-text{
-    color: rgb(201, 201, 201);
+    color: rgb(226, 226, 226);
 }
 
 .ff-link {
-    color: rgb(235, 235, 235);
+    color: rgb(255, 255, 255);
 }

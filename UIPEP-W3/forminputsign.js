@@ -1,22 +1,29 @@
 let firstName = document.querySelector('.fname-input');
-let lastName = document.querySelector('.lname-input');
-let age = document.querySelector('.age-input');
-let emailId = document.querySelector('.email-input');
-let countryCode = document.querySelector('.cc-input');
-let phoneNumber = document.querySelector('.phone-input');
-let username = document.querySelector('.username-input');
-let passOne = document.querySelector('.passone-input');
-let passTwo = document.querySelector('.passtwo-input');
+let firstNameReg = /^[^\!\@\#\$\%\^\&\*\(\)\=\_ \[\]\{\}\;\:\"\'\<\>\-][a-zA-Z]+$/;
 
-let firstNameReg = /^[a-zA-Z]+[^\!\@\#\$\%\^\&\*\(\)\=\_ \[\]\{\}\;\:\"\'\<\>\-]$/;
-let lastNameReg = /^[a-zA-Z]+[^\!\@\#\$\%\^\&\*\(\)\=\_ \[\]\{\}\;\:\"\'\<\>\-]$/;
-let ageReg = /^\+[0-9]{1,3}[^\!\@\#\$\%\^\&\*\(\)\=\_ \[\]\{\}\;\:\"\'\<\>\-]$/;
-let emailReg = /^[\w]+@[a-zA-z]+\.(com|in|co\.in)$/i;
+let lastName = document.querySelector('.lname-input');
+let lastNameReg = /^[^\!\@\#\$\%\^\&\*\(\)\=\_ \[\]\{\}\;\:\"\'\<\>\-][a-zA-Z]+$/;
+
+let age = document.querySelector('.age-input');
+let ageReg = /^[^\!\@\#\$\%\^\&\*\(\)\=\_ \[\]\{\}\;\:\"\'\<\>\-]\+[0-9]{1,3}$/;
+
+let emailId = document.querySelector('.email-input');
+let emailReg = /^[\w]+@[a-zA-z]+[^\!\#\$\%\^\&\*\(\)\=\[\]\{\}\;\:\"\'\<\>]\.(com|in|co\.in|co|org|edu)$/i;
+
+let countryCode = document.querySelector('.cc-input');
 let codeReg = /^\+[0-9]{1,3}$/;
-let phoneReg = /^[0-9]{10,11}[^\s\!\@\#\$\%\^\&\*\(\)\=\_ \[\]\{\}\;\:\"\'\<\>\-]*$/;
-let usernameReg = /^[\w]+[^\s\!\@\#\$\%\^\&\*\(\)\=\[\]\{\}\;\:\"\'\<\>]*$/;
-let passOneReg = /^[a-zA-Z0-9]{8,}/;
-let passTwoReg = /^[a-zA-Z0-9]{8,}/;
+
+let phoneNumber = document.querySelector('.phone-input');
+let phoneReg = /^[^\s\!\@\#\$\%\^\&\*\(\)\=\_ \[\]\{\}\;\:\"\'\<\>\-][0-9]{10,11}$/;
+
+let username = document.querySelector('.username-input');
+let usernameReg = /^[^\s\!\@\#\$\%\^\&\*\(\)\=\[\]\{\}\;\:\"\'\<\>][\w]{6,}$/;
+
+let passOne = document.querySelector('.passone-input');
+let passOneReg = /^[^\(\)\=\[\]\{\}\;\:\"\'\<\>]+[a-zA-Z0-9]{8,}/;
+
+let passTwo = document.querySelector('.passtwo-input');
+let passTwoReg = /^[^\(\)\=\[\]\{\}\;\:\"\'\<\>][a-zA-Z0-9]{8,}/;
 
 function Invalid(input){
     input.classList.add('invalid');

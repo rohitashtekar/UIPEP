@@ -20,33 +20,35 @@
         </div>
 
     </div>
+    <form class="form" action="/" method="GET">
+        <div class="container">
+            <div class="form-container">
 
-    <div class="container">
-        <div class="form-container">
-
-            <div class="head">
-                <p class="login">Login</p>
-            </div>
-
-            <div class="form">
-                    <input type="text" class="username-input input" placeholder="Enter username">
-                    <input type="password" class="password-input input" placeholder="Enter password">
-            </div>
-
-            <div class="button-container">
-                <div button class="login-but">
-                    Login
+                <div class="head">
+                    <p class="login">Login</p>
                 </div>
-            </div>
 
-            <div class="form-footer">
-                <div class="ff-text">
-                    Not a member yet&#63; <a href="forminputsign.html" class="ff-link">Sign up</a>
+                <div class="form-input">
+                        <input type="text" class="username-input input" placeholder="Enter Username" required>
+                        <!-- <div class="validity"></div> -->
+                        <input type="password" class="password-input input" placeholder="Enter password" required>
                 </div>
-            </div>
 
+                <div class="button-container">
+                    <button class="login-but" type="submit">
+                        Login
+                    </button>
+                </div>
+
+                <div class="form-footer">
+                    <div class="ff-text">
+                        Not a member yet&#63; <a href="forminputsign.html" class="ff-link">Sign up</a>
+                    </div>
+                </div>
+
+            </div>
         </div>
-    </div>
+    </form>
     <script src="forminput.js"></script>
 </body>
 </html>

@@ -104,7 +104,7 @@ html {
 
 .input {
     font-size: 1.4rem;
-    border: none;
+    border: 0.1rem solid black;
     border-radius: 0.2rem;
     width: 50%;
     margin: 1rem 2rem;
@@ -125,11 +125,11 @@ html {
 }
 
 .input.invalid{
-    border: 0.15rem solid red !important;
+    border-color: red !important;
 }
 
 .input.valid{
-    border: 0.15rem solid limegreen !important;
+    border-color: limegreen !important;
 }
 
 .fname-input {

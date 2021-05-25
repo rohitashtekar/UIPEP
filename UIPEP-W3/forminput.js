@@ -1,17 +1,25 @@
 let username = document.querySelector('.username-input');
-let password = document.querySelector('.password-input');
+let usernameReg = /^[\w]{6,}[^\s\!\@\#\$\%\^\&\*\(\)\=\[\]\{\}\;\:\"\'\<\>]*$/;
 
-let usernameReg = /^[\w]+[^\s\!\@\#\$\%\^\&\*\(\)\=\[\]\{\}\;\:\"\'\<\>]*$/;
-let passwordReg = /^[a-zA-Z0-9]{8,}/;
+let password = document.querySelector('.password-input');
+let passwordReg = /^[^\(\)\=\[\]\{\}\;\:\"\'<>][a-zA-Z0-9]{8,}/;
+
+let validityText = document.querySelector('.validity')
 
 function Invalid(input){
     input.classList.add('invalid');
     input.classList.remove('valid');
+    // input.style = 'margin-bottom: 0.2rem';
+    // validityText.innerText = `Invalid input`; //rohit_ashtekar
+    // validityText.style = 'color: red';
 }
 
 function Valid(input){
     input.classList.remove('invalid');
     input.classList.add('valid');
+    // input.style = 'margin-bottom: 0.2rem';
+    // validityText.innerText = `Valid input`;
+    // validityText.style = 'color: limegreen';
 }
 
 username.addEventListener('blur', validateUsername);
