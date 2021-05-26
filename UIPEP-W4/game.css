@@ -63,7 +63,7 @@
 }
 
 .cell:hover {
-    background-color: grey;
+    background-color: rgb(209, 209, 209);
 }
 
 .cell.x::before,
