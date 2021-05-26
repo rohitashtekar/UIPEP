@@ -1,0 +1,142 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.heading {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.box-container {
+    height: 400px;
+    display: flex;
+    align-items: center;
+}
+
+.board {
+    display: grid;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(3, auto);
+}
+
+.cell {
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.cell:first-child,
+.cell:nth-child(2),
+.cell:nth-child(3) {
+    border-top: none;
+}
+
+
+.cell:nth-child(3n + 3) {
+    border-right: none;
+}
+
+.cell:nth-child(3n + 1) {
+    border-left: none;
+}
+
+.cell:last-child,
+.cell:nth-last-child(2),
+.cell:nth-last-child(3) {
+    border-bottom: none;
+}
+
+.cell.x,
+.cell.o {
+    cursor: not-allowed;
+}
+
+.cell:hover {
+    background-color: grey;
+}
+
+.cell.x::before,
+.cell.x::after {
+    content: '';
+    height: 90%;
+    width: 15px;
+    position: absolute;
+    background-color: black;
+}
+
+.cell.x::before {
+    transform: rotate(45deg);
+}
+
+.cell.x::after {
+    transform: rotate(-45deg);
+}
+
+.cell.o::before,
+.cell.o::after {
+    content: '';
+    border-radius: 50%;
+    position: absolute;
+}
+
+.cell.o::before {
+    height: 85%;
+    width: 85%;
+    background-color: black;
+}
+
+.cell.o::after {
+    height: 55%;
+    width: 55%;
+    background-color: white;
+}
+
+.btn {
+    color: white;
+    background-color: black;
+    border: 0.1rem solid black;
+    box-shadow: 0rem 0.1rem 1rem rgb(0, 0, 0);
+    border-radius: 0.5rem;
+    padding: 2rem 3rem;
+    margin: 0.5rem;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+.btn:hover {
+    background-color: white; 
+    color: black;
+}
+
+.winning-text {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.winning-text.show {
+    display: flex;
+}
