@@ -115,3 +115,27 @@ box.addEventListener('mouseup', () => {
     box.style.backgroundColor = 'green';
     box.innerHTML = "50px";
 });
+
+let para = document.createElement('p');
+para.innerHTML = `Hello World New Element`;
+document.querySelector('.first').appendChild(para);
+
+para.innerHTML = `width: ${screen.width}, height: ${screen.height}`;
+
+document.querySelector('.container').addEventListener('click', () => {
+    window.scrollBy(0,50);
+});
+
+let pos = document.createElement('p');
+document.querySelector('.first').appendChild(pos);
+
+window.addEventListener('mousemove', event => {
+    let mousePos = null;
+
+    if(!mousePos){
+        setTimeout(() => {
+            pos.innerHTML = `Mouse at: ${mousePos.pageX},${mousePos.pageY}`;
+        }, 100);
+    }
+    mousePos = event;
+});
