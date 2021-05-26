@@ -9,3 +9,25 @@
     background-size: contain;
 }
 
+.container {
+    height: 450px;
+    width: 450px;
+    background-color: grey;
+    position: relative;
+    margin-top: 2rem;
+}
+
+.second {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background-color: red;
+    text-align: center;
+}
+
+.btn-container {
+    margin-top: 2rem;
+}
+button {
+    margin-right: 1rem;
+}
