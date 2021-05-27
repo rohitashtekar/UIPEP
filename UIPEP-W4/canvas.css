@@ -1,0 +1,15 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: monospace,arial,sans-serif,serif;
+}
+
+body {
+    background: #666;
+}
+
+.board {
+    background-color: #fff;
+    border: 0.1rem solid black;
+}
