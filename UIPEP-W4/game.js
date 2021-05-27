@@ -15,6 +15,7 @@ const cellElements = document.querySelectorAll('.cell');
 let winMessageElement = document.querySelector('.winning-text');
 let winMessageText = document.querySelector('[data-winning-text]');
 const restartBtn = document.querySelector('.btn');
+let turn = document.querySelector('.turn-text');
 let oTurn;
 
 startGame();
@@ -22,7 +23,7 @@ startGame();
 function clickHandle(event) {
     const cell = event.target;
     const currentClass =  oTurn ? O_CLASS : X_CLASS;
-    placeMark(cell, currentClass)
+    placeMark(cell, currentClass);
     if(checkWin(currentClass)) {
         endGame(false);
     }
@@ -34,6 +35,17 @@ function clickHandle(event) {
     }
 }
 
+function startGame() {
+    oTurn = false;
+    cellElements.forEach( cell => {
+        cell.addEventListener('click', clickHandle, {once : true})
+        cell.classList.remove(X_CLASS);
+        cell.classList.remove(O_CLASS);
+    });
+    winMessageElement.classList.remove('show');
+    turn.classList.add('show-text');
+}
+
 function endGame(draw) {
     if(draw) {
         winMessageText.innerText = `Draw!`;
@@ -42,6 +54,15 @@ function endGame(draw) {
         winMessageText.innerText = `Team ${oTurn ? "O" : "X"} Wins`;
     }
     winMessageElement.classList.add('show');
+    turn.classList.remove('show-text');
+}
+
+function checkWin(currentClass) {
+    return WIN_COMBINATIONS.some( combination => {
+        return combination.every(index => {
+            return cellElements[index].classList.contains(currentClass);
+        })
+    })
 }
 
 function isDraw() {
@@ -52,29 +73,17 @@ function isDraw() {
 }
 
 function placeMark(cell, currentClass) {
-    cell.classList.add(currentClass)
+    cell.classList.add(currentClass);
 }
 
 function switchTurn() {
     oTurn = !oTurn;
+    if(oTurn){
+        turn.innerHTML = `O's Turn`;
+    }
+    else {
+        turn.innerHTML = `X's Turn`;
+    }
 }
 
-restartBtn.addEventListener('click', startGame)
-
-function startGame() {
-    oTurn = false;
-    cellElements.forEach( cell =>{
-        cell.addEventListener('click', clickHandle, {once : true})
-        cell.classList.remove(X_CLASS);
-        cell.classList.remove(O_CLASS);
-    });
-    winMessageElement.classList.remove('show');
-}
-
-function checkWin(currentClass) {
-    return WIN_COMBINATIONS.some(combination => {
-        return combination.every(index => {
-            return cellElements[index].classList.contains(currentClass);
-        })
-    })
-}
+restartBtn.addEventListener('click', startGame);

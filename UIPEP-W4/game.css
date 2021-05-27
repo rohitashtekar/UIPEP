@@ -11,6 +11,10 @@
     margin: 2rem 0;
 }
 
+.head {
+    font-size: 3rem;
+}
+
 .box-container {
     height: 400px;
     display: flex;
@@ -120,6 +124,18 @@
 .btn:hover {
     background-color: white; 
     color: black;
+}
+
+.turn-text {
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: monospace;
+    display: none;
+}
+
+.turn-text.show-text {
+    display: flex;
+    justify-content: center;
 }
 
 .winning-text {
