@@ -1,0 +1,48 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(165, 165, 165);
+}
+
+.canvas-container {
+    width: 100%;
+}
+
+.options {
+    display: block;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.label {
+    margin: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.colors {
+    margin-left: 0.5rem;
+}
+
+.line-width {
+    margin-left: 0.5rem;
+    width: 20%;
+}
+
+.eraser::after {
+    content: "";
+    height: 20px;
+    width: 30px;
+    margin-left: 5px;
+    border: 0.1rem solid black;
+    background-color: white;
+    display: inline-block;
+}
+
+
