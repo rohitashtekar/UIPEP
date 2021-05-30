@@ -14,17 +14,24 @@
         <canvas class="canvas"></canvas>
     </div>
 
-    <div class="options">
-        <label class="color-label label">
-            Choose Color :<input type="color" class="colors">
-        </label>
-        
-        <label class="line-size label">
-            Pen Size :<input type="range" class="line-width" min="1" max="100" value="5">
-        </label>
+    <div class="options-container">
+        <div class="options">
+            <label class="color-label label">
+                Select Color :<input type="color" class="colors" value="#fff" onchange="changeColor(value)">
+            </label>
+            
+            <label class="line-size label">
+                Pen Size :<input type="range" class="line-width" min="1" max="100" value="5" onchange="penSizeChange(this.value)">
+            </label>
 
-        <div class="eraser label">Eraser :</div>
+            <div class="eraser label">Eraser :</div>
+        </div>
+
+        <div class="options">
+                <div class="reset-btn">Reset Canvas</button>
+        </div>
     </div>
+
     <script src="paint.js"></script>
 </body>
 </html>

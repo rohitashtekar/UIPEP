@@ -8,8 +8,11 @@ canvas.style.backgroundColor = 'white';
 canvas.style.margin = '10px';
 canvas.style.boxShadow = '0px 2px 8px 2px black';
 
-// declaration
+
 let painting = false;
+let penSize = 5;
+
+context.fillStyle = 'black';
 
 function startPos(e) {
     if(e.button === 0){
@@ -27,26 +30,36 @@ function draw(e) {
     
     if(!painting) {return}
 
-    let inputColor = document.querySelector('.color');
-    context.fillStyle = inputColor;
+    context.strokeStyle = context.fillStyle;
+    
 
-    context.lineWidth = 5;
+    context.lineWidth = penSize;
     context.lineCap = 'round';
 
     context.lineTo(e.offsetX, e.offsetY);
     context.stroke();
 
     context.moveTo(e.offsetX, e.offsetY);
-
-   
 }
 
-// event listeners
 canvas.addEventListener('mousedown', startPos);
 canvas.addEventListener('mouseup', stopPos);
 canvas.addEventListener('mousemove', draw);
 
 // options
+const changeColor = (color) => {
+    context.fillStyle = color;
+}
 
+function penSizeChange(pensize) {
+    penSize = pensize;
+}
 
+let eraser = document.querySelector('.eraser')
+eraser.addEventListener('click', () => {
+    context.fillStyle = 'white';
+})
 
+document.querySelector('.reset-btn').addEventListener('click', () => {
+    context.clearRect(0, 0, canvas.width, canvas.height);
+});
