@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="getpost.css">
+    <title>Fetch Api</title>
+</head>
+<body>
+    
+    <div class="btn-container">
+        <button class="get-btn btn">GET Data</button>
+        <button class="post-btn btn">POST data</button>
+    </div>
+
+    <form class="postForm">
+        <div>
+            <input type="text" class="email" placeholder="Email" size="40">
+        </div>
+        <br>
+        <div>
+            <textarea class="password" placeholder="Password" size="40"></textarea>
+        </div>
+        <div>
+            <input type="button" value="get" class="get-local">
+            <input type="submit" value="submit" class="sub-local">
+        </div>
+    </form>
+
+    <div class="output-container">
+        <p class="output"></p>
+    </div>
+
+    <script src="getpost.js"></script>
+</body>
+</html>
