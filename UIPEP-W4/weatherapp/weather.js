@@ -53,7 +53,26 @@ function getWeather(latitude, longitude) {
 function displayWeather() {
     tempValue.innerHTML = `${weather.temperature.value}&#176C`;
     icon.innerHTML = `<img src="icons/${weather.iconId}.svg">`
-    climate.innerHTML = `${weather.description}`;
-    loc.innerHTML = `${weather.city}, ${weather.country}`
+    climate.innerHTML = `${weather.description.toUpperCase()}`;
+    loc.innerHTML = `${weather.city.toUpperCase()}, ${weather.country.toUpperCase()}`
 }
 
+function celToFar(temperature) {
+    return ((temperature * 9/5) + 32);
+}
+
+tempValue.addEventListener('click', () => {
+    if(weather.temperature.value === undefined) return;
+
+    if(weather.temperature.unit === 'celsius') {
+        let fahrenheit = celToFar(weather.temperature.value);
+        fahrenheit = Math.floor(fahrenheit);
+
+        tempValue.innerHTML = `${fahrenheit}&#176F`;
+        weather.temperature.unit = 'fahrenheit';
+    }
+    else {
+        tempValue.innerHTML = `${weather.temperature.value}&#176C`;
+        weather.temperature.unit = 'celsius';
+    }
+})
