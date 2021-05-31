@@ -1,5 +1,5 @@
 const KELVIN = 273;
-const apikey = '4bdda8b6549bcd23b379d2636ca63117';
+const apikey = '';
 
 const loc = document.querySelector('.location');
 const notif = document.querySelector('.notif');
