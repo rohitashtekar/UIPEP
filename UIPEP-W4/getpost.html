@@ -15,20 +15,20 @@
         <button class="post-btn btn">POST data</button>
     </div>
 
-    <form class="postForm">
-        <div>
-            <input type="text" class="email" placeholder="Email" size="40">
-        </div>
-        <br>
-        <div>
-            <textarea class="password" placeholder="Password" size="40"></textarea>
+    <form class="postForm"> <!-- action="./users.json" -->
+            <input type="text" class="fname inp" placeholder="Enter First Name" size="40">
         </div>
         <div>
-            <input type="button" value="get" class="get-local">
-            <input type="submit" value="submit" class="sub-local">
+            <input type="text" class="lname inp" placeholder="Enter Last Name" size="40">
+        </div>
+        <div>
+            <input type="text" class="email inp" placeholder="Email" size="40">
         </div>
     </form>
 
+    <input type="button" value="Get Users" class="get-local">
+    <input type="button" value="Submit" class="sub-local">
+    
     <div class="output-container">
         <p class="output"></p>
     </div>

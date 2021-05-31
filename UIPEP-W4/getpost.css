@@ -3,7 +3,12 @@
     padding: 20px;
 }
 
-.get-local,.sub-local {
+.get-local,.sub-local,.add-data {
     margin: 20px 0 0 5px;
     padding: 10px 20px;
 }
+
+.inp {
+    margin: 20px 0 0 5px;
+    padding: 10px 20px;
+} 

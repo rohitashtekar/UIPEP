@@ -33,40 +33,64 @@ const postData = () => {
 getBtn.addEventListener('click', getData);
 postBtn.addEventListener('click', postData);
 
+const sendLocalData = (method, url, data) => {
+    return fetch(url, {
+        method : method,
+        headers : data ? { 'Accept':'application/json, text/plain */*','Content-Type':'application/json'} : {},
+        body : JSON.stringify(data)
+    }).then(response => {
+        return response.json();
+    });
+};
+
 const getUserDetails = () => {
-    fetch('users.json')
-    .then((response) => response.json())
-    .then((responseData) => {
-        let output = '<h2> Users </h2>'
-        responseData.forEach(function(user){
+    sendLocalData('GET','users.json').then(responseData => {
+        let output = '<h2> User Details </h2>'
+        responseData.forEach((user) => {
         output += `<ul>
-                <li>${user.id}</li>
-                <li>${user.name}</li>
-                <li>${user.email}</li>
+                <li>Id: ${user.id}</li>
+                <li>Name: ${user.first_name} ${user.last_name}</li>
+                <li>Email-Id: ${user.email}</li>
                 </ul>`
         });
-        document.querySelector('.output').innerHTML = output
-    })
+        document.querySelector('.output').innerHTML = output;
+    });
 }
 
 document.querySelector('.get-local').addEventListener('click', getUserDetails)
 
-const submitUserDetails = () => {
-    let email = document.querySelector('.email').value
-    let password = document.querySelector('.password').value
+const sendUserDetails = (data) => {
+    
+};
 
-    fetch('users.json',{
-        method : 'POST',
-        headers : {
-            'Content-type': 'application/json'
-        },
-        body : JSON.stringify({email : email, password : password})
-        })
-        .then((response) => response.json())
-        .then((responseData) => {
-            console.log(responseData)
-        })
-        document.querySelector('.output').textContent = output
-}
+function retrieveData(){
+    let email = document.querySelector('.email').value;
+    let fName = document.querySelector('.fname').value;
+    let lName = document.querySelector('.lname').value;
+    
+    
+    let data = { 
+        email : email,
+        username : fName + " " + lName
+    };
+    // console.log(data);
+    return data;
+};
 
-document.querySelector('.sub-local').addEventListener('click', submitUserDetails)
+document.querySelector('.sub-local').addEventListener('click', () => {
+    let data = retrieveData()
+    const options = {
+                method : 'POST',
+                headers : new Headers ({
+                    'Content-Type':'application/json'
+                }),
+                body : JSON.stringify(data)
+            }
+            return fetch('https://jsonplaceholder.typicode.com/posts', options)
+            .then(response => {
+                return response.json();
+            })
+            .then((response) => {
+                document.querySelector('.output').innerHTML = JSON.stringify(response);
+            });
+});
