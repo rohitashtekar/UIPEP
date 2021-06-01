@@ -59,7 +59,7 @@ const getUserDetails = () => {
 
 document.querySelector('.get-local').addEventListener('click', getUserDetails)
 
-const sendUserDetails = (data) => {
+const sendUserDetails = () => {
     
 };
 
@@ -78,13 +78,13 @@ function retrieveData(){
 };
 
 document.querySelector('.sub-local').addEventListener('click', () => {
-    let data = retrieveData()
+    let retData = retrieveData()
     const options = {
                 method : 'POST',
                 headers : new Headers ({
                     'Content-Type':'application/json'
                 }),
-                body : JSON.stringify(data)
+                body : JSON.stringify(retData)
             }
             return fetch('https://jsonplaceholder.typicode.com/posts', options)
             .then(response => {
