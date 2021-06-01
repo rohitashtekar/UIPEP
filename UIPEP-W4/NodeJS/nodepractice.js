@@ -18,14 +18,61 @@
 
 //-server--
 const http = require("http");
+const fs = require('fs');
 
 const server = http.createServer( (req, res) => {
     console.log(`User visited ${req.url}, Method : ${req.method}`);
-    res.writeHead(200, {'Content-Type':'text/html'});
-    res.end(`Hello! Good day to you`);
+
+    res.setHeader('Content-Type','text/html');
+
+    let path = './';
+    switch(req.url) {
+        case '/': 
+            path += 'events.html';
+            res.statusCode = 200;
+            break;
+        case '/events.js': 
+            res.statusCode = 301;
+            res.setHeader('Location', '/')
+            break;
+        case '/getpost':
+            path += 'getpost.html';
+            res.statusCode = 200;
+            break;
+        case '/getpost.html':
+            res.statusCode = 301;
+            res.setHeader('Location','/getpost')
+            break;
+        case '/game':
+            path += 'game.html';
+            res.statusCode = 200;
+            break;
+        case '/game.html':
+            res.statusCode = 301;
+            res.setHeader('Location', '/game');
+            break;
+        default :
+            path += '404.html';
+            res.statusCode = 404    ;
+            break;
+    }
+    // res.write(`<h1>Hello, How are you doing?</h1><br>`);
+    // res.write(`<i>Bye! Good day to you</i>`);
+
+    fs.readFile(path, (err,data) => {
+        if(err) {
+            console.log(err);
+            res.end();
+        }
+        else {
+            // res.write(data);
+            res.end(data);
+        }
+    })
 });
 
-console.log(`Listening on http://localhost:5500`);
-server.listen(5500);
+server.listen(3000, () => {
+    console.log(`Listening for requests on http://localhost:3000`);
+});
 
 
