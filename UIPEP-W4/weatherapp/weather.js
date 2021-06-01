@@ -1,5 +1,5 @@
-const KELVIN = 273;
-// const apikey = '4bdda8b6549bcd23b379d2636ca63117';
+const KELVIN = 273.16;
+const apikey = '4bdda8b6549bcd23b379d2636ca63117';
 
 const loc = document.querySelector('.location');
 const notif = document.querySelector('.notif');
@@ -40,7 +40,7 @@ function getWeather(latitude, longitude) {
         return data;
     })
     .then( (data) => {
-        weather.temperature.value = Math.ceil(data.main.temp - KELVIN);
+        weather.temperature.value = Math.floor(data.main.temp - KELVIN);
         weather.iconId = data.weather[0].icon;
         weather.description = data.weather[0].description;
         weather.city = data.name;
@@ -58,7 +58,7 @@ function displayWeather() {
 }
 
 function celToFar(temperature) {
-    return ((temperature * 9/5) + 32);
+    return (temperature * 9/5) + 32;
 }
 
 tempValue.addEventListener('click', () => {
