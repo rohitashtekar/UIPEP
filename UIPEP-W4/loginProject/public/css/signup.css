@@ -6,7 +6,7 @@
 }
 
 body {
-    background-image: url('./images/bg1.jpg');
+    background-image: url('../images/bg1.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -131,7 +131,12 @@ body {
 
 .input.valid{
     border-color: limegreen !important;
-    margin-bottom: 0.1rem;  
+    margin-bottom: 0.1rem;
+}
+
+.val {
+    margin-left: 2px;
+    font-weight: bold;
 }
 
 .button-container {
