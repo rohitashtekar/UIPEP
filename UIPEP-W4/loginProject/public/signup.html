@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <link rel="stylesheet" href="/css/signup.css">
+    <title>Signup</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo-nav">
+            <p class="logo-text"></p>
+        </div>
+        <div class="login-nav">
+            <a href="" class="login-link">Login</a>
+        </div>
+    </div>
+   
+    <div class="container">
+        <div class="form-container">
+                <form action="/" class="form-get" method="GET">
+                    <div class="head">
+                        <p class="signup-head">Sign Up</p>
+                    </div>
+                    
+                    <div class="name-cont input-container">
+                        <input type="text" class="fname input" placeholder="First Name" required>
+                        <div class="valid-fname"></div>
+                    </div>
+
+                    <div class="lname-cont input-container">
+                        <input type="text" class="lname input" placeholder="Last Name" required>
+                        <div class="valid-lname"></div>
+                    </div>
+                    
+                    <div class="personal-container">
+                        <div class="email-container input-container">
+                            <input type="text" class="email input" placeholder="Enter E-mail ID" required>
+                            <div class="valid-email"></div>
+                        </div>
+                    </div>
+
+                    <div class="username-cont input-container">
+                        <input type="text" class="username input" placeholder="Set Username" required>
+                        <div class="valid-user"></div>
+                    </div>
+
+                    <div class="password input-container">
+                        <input type="password" class="passone input" placeholder="Enter Password" required>
+                        <div class="valid-passone"></div>
+                    </div>
+
+                    <div class="password-confirm input-container">
+                        <input type="password" class="passtwo input" placeholder="Confirm Password" required>
+                        <div class="valid-passtwo"></div>
+                    </div>
+                    
+
+                    <div class="button-container">
+                        <button class="signup-but" type="submit">
+                            Sign Up
+                        </button>
+                    </div>
+            </form>
+            <div class="form-footer">
+                <div class="ff-text">
+                    Already a member&#63; <a href="" class="ff-link">Login</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../src/signup.js"></script>
+</body>
+</html>
