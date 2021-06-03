@@ -11,8 +11,12 @@
     "url": "\"https://github.com/rohitashtekar/UIPEP-Internship.git\""
   },
   "keywords": [
-    "[]"
+    "master",
+    "js"
   ],
   "author": "\"\"",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
