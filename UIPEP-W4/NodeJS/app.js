@@ -18,7 +18,11 @@ app.get('/get', (req,res) => {
 });
 
 app.get('/profile/:name', (req, res) => {
-    res.render('profile',{person: req.params.name});
+    let data = {
+        age: 23,
+        job: 'ninja',
+    }
+    res.render('profile',{person: req.params.name, data: data});
 })
 
 app.use((req,res) => {
