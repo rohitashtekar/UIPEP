@@ -8,19 +8,21 @@ let emailId = document.querySelector('.email');
 let emailReg = /^[\w]+@[a-zA-z]+[^\!\#\$\%\^\&\*\(\)\=\[\]\{\}\;\:\"\'\<\>]\.(com|in|co\.in|co|org|edu)$/i;
 
 let username = document.querySelector('.username');
-let usernameReg = /^[^\s\!\@\#\$\%\^\&\*\(\)\=\[\]\{\}\;\:\"\'\<\>][\w]{6,}$/;
+let usernameReg = /^[\w]+[\-]*[\w]*[^\s\!\@\#\$\^\&\*\(\)\=\[\]\{\}\;\:\"\'\<\>]$/;
 
 let passOne = document.querySelector('.passone');
-let passOneReg = /^[^\(\)\=\[\]\{\}\;\:\"\'\<\>]+[a-zA-Z0-9]{8,}/;
+let passOneReg = /^[^\(\)\=\[\]\{\}\;\:\"\'\<\>]+[a-zA-Z0-9]{7,}/;
 
 let passTwo = document.querySelector('.passtwo');
-let passTwoReg = /^[^\(\)\=\[\]\{\}\;\:\"\'\<\>][a-zA-Z0-9]{8,}/;
+let passTwoReg = /^[^\(\)\=\[\]\{\}\;\:\"\'\<\>][a-zA-Z0-9]{7,}/;
 
 let validFname = document.querySelector('.valid-fname');
 let validLname = document.querySelector('.valid-lname');
 let validEmail = document.querySelector('.valid-email');
 let validUser = document.querySelector('.valid-user');
 let validPass = document.querySelector('.valid-passone');
+let signupBut = document.querySelector('.signup-btn');
+let confirmPass = document.querySelector('.confirm-valid');
 
 function Invalid(input){
     input.classList.add('invalid');
@@ -102,12 +104,21 @@ function validatePassOne(){
     }
 }
 
-// passTwo.addEventListener('blur', validatePassTwo);
-// function validatePassTwo(){
-//     if(passTwoReg.test(passTwo.value)){
-//         Valid(passTwo);
-//     }
-//     else{
-//         Invalid(passTwo);
-//     }
-// }
+passTwo.addEventListener('blur', validatePassTwo);
+function validatePassTwo(){
+    if(passOne.value === passTwo.value){
+        Valid(passTwo);
+        confirmPass.innerText = `Passwords match`;
+        confirmPass.style = 'color: limegreen';
+    }
+    else{
+        Invalid(passTwo);
+        confirmPass.innerText = `Passwords do not match, Try again`;
+        confirmPass.style = 'color: red';
+    }
+}
+
+signupBut.addEventListener('submit', event => {
+    event.preventDefault();
+    
+})

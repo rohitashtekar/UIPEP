@@ -11,15 +11,15 @@ app.listen(port, (error) => {
 
 app.use('/public', express.static('public'));
 
-app.get('/', (req,res) => {
-    res.sendFile('./home.html',{root : __dirname});
+app.get('/', (req,res) => {      ///^\/login[\w]*/
+    res.sendFile('./login.html',{root: __dirname});
 });
 
-app.get(/^\/login[\w]*/, (req,res) => {
-    res.sendFile('./login.html',{root: __dirname});
+app.get(/^\/home[\.|\-|\_]*[\w]*/, (req,res) => {   
+    res.sendFile('./home.html',{root : __dirname});
 })
 
-app.get(/^\/signup[\w]*/, (req,res) => {
+app.get(/^\/signup[\.|\-|\_]*[\w]*/, (req,res) => {
     res.sendFile('./signup.html',{root: __dirname});
 })
 

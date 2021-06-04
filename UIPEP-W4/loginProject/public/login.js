@@ -1,8 +1,8 @@
 let username = document.querySelector('.username-input');
-let usernameReg = /^[\w]{6,}[^\s\!\@\#\$\%\^\&\*\(\)\=\[\]\{\}\;\:\"\'\<\>]*$/;
+let usernameReg = /^[\w]{2,}[\-]*[\w]*[^\s\!\@\#\$\^\&\*\(\)\=\[\]\{\}\;\:\"\'\<\>]$/;
 
 let password = document.querySelector('.password-input');
-let passwordReg = /^[^\(\)\=\[\]\{\}\;\:\"\'<>][a-zA-Z0-9]{8,}/;
+let passwordReg = /^[^\(\)\=\[\]\{\}\;\:\"\'<>][a-zA-Z0-9]{7,}/;
 
 let validUser = document.querySelector('.valid-user');
 let validPass = document.querySelector('.valid-pass');
@@ -44,3 +44,17 @@ function validatePassword(){
         validPass.style = 'color: red';
     }
 }
+
+let loginForm = document.querySelector('.form');
+let loggedText = document.querySelector('.logged-in');
+let signupNav =  document.querySelector('.signup');
+
+loginForm.addEventListener('submit', event => {
+    event.preventDefault();
+    loginForm.classList.add('hide');
+    signupNav.classList.add('logout');
+    signupNav.innerText = 'Logout'
+    loggedText.innerHTML = 'Successfully Logged in!';
+})
+
+

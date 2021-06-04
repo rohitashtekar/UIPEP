@@ -103,17 +103,19 @@ body {
 }
 
 .input {
+    font-family: monospace, Arial, sans-serif;
     font-size: 1.3rem;
-    border: 0.1rem solid black;
-    border-radius: 0.2rem;
     width: 100%;
     margin: 1rem 0rem;
     padding: 0.8rem;
+    border-radius: 0.2rem;
+    border: 0.1rem solid black;
     background-color: rgba(255, 255, 255, 0.8);
     color: black;
 }
 
 .input::placeholder {
+    font-family: monospace, Arial, sans-serif;
     color: rgb(156, 156, 156);
 }
 
@@ -125,6 +127,7 @@ body {
 }
 
 .input.invalid{
+    color: red;
     border-color: red !important;
     margin-bottom: 0.1rem;
 }
@@ -134,10 +137,10 @@ body {
     margin-bottom: 0.1rem;
 }
 
-.val {
+/* .val {
     margin-left: 2px;
     font-weight: bold;
-}
+} */
 
 .button-container {
     display: flex;
@@ -145,7 +148,7 @@ body {
 }
 
 /* login button */
-.signup-but {
+.signup-btn {
     color: black;
     background-color: white; 
     border: 0.1rem solid rgb(37, 128, 139);
@@ -162,7 +165,7 @@ body {
     transition-duration: 0.2s;
 }
 
-.signup-but:hover {
+.signup-btn:hover {
     color: white;
     background-color: grey;
 }

@@ -30,6 +30,7 @@
                 </div>
 
                 <div class="form-input">
+                        <div class="incorrect-userpass"></div>
                         <input type="text" class="username-input input" placeholder="Enter Username" required>
                         <div class="valid-user"></div>
                         <input type="password" class="password-input input" placeholder="Enter password" required>
@@ -41,8 +42,11 @@
                         Login
                     </button>
                 </div>
-
+                
                 <div class="form-footer">
+                    <p class="ff-text">
+                        Forgot password&#63; <a href="" class="ff-link">Reset</a>
+                    </p>
                     <div class="ff-text">
                         Not a member yet&#63; <a href="/signup" class="ff-link">Sign up</a>
                     </div>
@@ -51,6 +55,8 @@
             </div>
         </div>
     </form>
+
+    <div class="logged-in"></div>
 
     <script src="./public/login.js"></script>
 </body>
