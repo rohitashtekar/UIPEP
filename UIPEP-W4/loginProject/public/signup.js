@@ -106,16 +106,24 @@ function validatePassOne(){
 
 passTwo.addEventListener('blur', validatePassTwo);
 function validatePassTwo(){
-    if(passOne.value === passTwo.value){
-        Valid(passTwo);
-        confirmPass.innerText = `Passwords match`;
-        confirmPass.style = 'color: limegreen';
+    if(passTwoReg.test(passTwo.value)){
+        if(passOne.value === passTwo.value){
+            Valid(passTwo);
+            confirmPass.innerText = `Passwords match`;
+            confirmPass.style = 'color: limegreen';
+        }
+        else{
+            Invalid(passTwo);
+            confirmPass.innerText = `Passwords do not match, Try again`;
+            confirmPass.style = 'color: red';
+        }
     }
-    else{
+    else {
         Invalid(passTwo);
-        confirmPass.innerText = `Passwords do not match, Try again`;
+        confirmPass.innerText = `Invalid input`;
         confirmPass.style = 'color: red';
     }
+    
 }
 
 signupBut.addEventListener('submit', event => {
