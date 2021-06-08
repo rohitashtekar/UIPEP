@@ -49,12 +49,9 @@ let loginForm = document.querySelector('.form');
 let loggedText = document.querySelector('.logged-in');
 let signupNav =  document.querySelector('.signup');
 
-loginForm.addEventListener('submit', event => {
-    event.preventDefault();
-    loginForm.classList.add('hide');
-    signupNav.classList.add('logout');
-    signupNav.innerText = 'Logout'
-    loggedText.innerHTML = 'Successfully Logged in!';
-})
+// loginForm.addEventListener('submit', event => {
+    // event.preventDefault();
+    
+// })
 
 
