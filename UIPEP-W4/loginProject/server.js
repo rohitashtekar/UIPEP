@@ -2,13 +2,6 @@ let express = require('express');
 let app = express();
 const port = process.env.PORT || 3000;
 
-app.listen(port, (error) => {
-    if(error){
-        return console.log(`Error: ${error}`);
-    }
-    console.log(`Listening on port: http://localhost:${port}`);
-})
-
 app.use('/public', express.static('public'));
 
 app.get('/', (req,res) => {      ///^\/login[\w]*/
@@ -26,3 +19,11 @@ app.get(/^\/signup[\.|\-|\_]*[\w]*/, (req,res) => {
 app.use((req, res) => {
     res.status(404).sendFile('./404.html', {root: __dirname})
 })
+
+app.listen(port, (error) => {
+    if(error){
+        return console.log(`Error: ${error}`);
+    }
+    console.log(`Listening on port: http://localhost:${port}`);
+})
+
