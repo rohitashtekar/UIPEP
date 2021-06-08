@@ -16,7 +16,7 @@ app.get(/^\/signup[\.|\-|\_]*[\w]*/, (req,res) => {
     res.sendFile('./signup.html',{root: __dirname});
 })
 
-app.use((req, res) => {
+app.get('*', (req, res) => {
     res.status(404).sendFile('./404.html', {root: __dirname})
 })
 

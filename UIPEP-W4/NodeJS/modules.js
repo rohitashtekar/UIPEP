@@ -155,7 +155,7 @@ const logger = (req, res, next) => {
     let method = req.method;
     let url = req.url;
     console.log(method, time, url);
-    res.send('<h1>Testing</h1>')
+    next();
 }
 
 app.get('/', logger, (req,res) => {
