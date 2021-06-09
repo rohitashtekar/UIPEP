@@ -175,34 +175,18 @@
 const express = require('express');
 const app = express();
 const peopleRoutes = require('./routes/people');
-const {products} = require('./data');
+const productRoutes = require('./routes/products');
 
 let port = 5000;
 
 app.use(express.urlencoded({extended:false}));
+app.use(express.json());
 
 app.use('/api/people', peopleRoutes);
-
-app.get('/api/products', (req,res) => {
-    const {limit,search} = req.query;
-    let sortedProducts = [...products];
-
-    if(limit) { 
-        sortedProducts = sortedProducts.slice(0,Number(limit));
-       
-    }
-    if(search) {
-        sortedProducts = sortedProducts.filter((product) => {
-            return product.name.startsWith(search);
-        });
-    }
-    res.status(200).json({success: true, products: sortedProducts});
-});
+app.use('/api/products', productRoutes);
 
 app.get('/', (req,res) => {
-
     res.sendFile('./homemod.html',{root: __dirname});
-
 });
 
 app.post('/home', (req,res) => {

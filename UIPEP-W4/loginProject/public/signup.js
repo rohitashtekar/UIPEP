@@ -126,7 +126,22 @@ function validatePassTwo(){
     
 }
 
-signupBut.addEventListener('submit', event => {
+signupBut.addEventListener('submit', registerUser);
+
+async const registerUser = (event) => {
     event.preventDefault();
     
-})
+    const result = await fetch('/signup', {
+        method: 'POST',
+        headers: {'Content-Type':'application/json'},
+        body: JSON.stringify({
+            firstName,
+            lastName,
+            emailId,
+            username,
+            passOne
+        })
+    }).then(res => res.json())
+
+    console.log(result);
+}
