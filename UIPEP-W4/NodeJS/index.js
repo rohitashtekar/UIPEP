@@ -4,7 +4,7 @@ const app = express();
 const mongoose = require('mongoose');
 const User = require('./users');
 
-mongoose.connect('',
+mongoose.connect('mongodb+srv://rohitashtekar:nougat@cluster0.4wosp.mongodb.net/test?retryWrites=true&w=majority',
 {
     useNewUrlParser : true,
     useUnifiedTopology : true
@@ -13,24 +13,26 @@ mongoose.connect('',
     console.warn("DB Connected!");
 });
 
-// User.find({}, (err, users) => {
-//     if(err) console.log(err);
+User.find({}, (err, users) => {
+    if(err) console.log(err);
 
-//     console.log(users);
+    console.log(users);
+});
+
+// let data = new User({
+//     // _id: new mongoose.Types.ObjectId,
+//     name: "John",
+//     email: "john@work.org",
+//     age: 27,
+//     country: "Cape Town",
+//     continent : "Africa"
 // });
 
-let data = new User({
-    _id: new mongoose.Types.ObjectId,
-    name: "Brian",
-    email: "brian@work.org",
-    age: 27,
-    country: "Australia"
-});
-
-data.save()
-.then((result) => {
-    console.log(result);
-})
-.catch((err) => {
-    console.log(err);
-});
+// data.save()
+// .then((result) => {
+//     console.log(result);
+//     console.log(`Success!`);
+// })
+// .catch((err) => {
+//     console.log(err);
+// });

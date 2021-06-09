@@ -8,11 +8,11 @@ app.get('/', (req,res) => {      ///^\/login[\w]*/
     res.sendFile('./login.html',{root: __dirname});
 });
 
-app.get(/^\/home[\.|\-|\_]*[\w]*/, (req,res) => {   
+app.get(/^\/home[\.][html|htm|hml]/, (req,res) => {   
     res.sendFile('./home.html',{root : __dirname});
 })
 
-app.get(/^\/signup[\.|\-|\_]*[\w]*/, (req,res) => {
+app.get(/^\/signup[\.][html|htm|hml]/, (req,res) => {
     res.sendFile('./signup.html',{root: __dirname});
 })
 

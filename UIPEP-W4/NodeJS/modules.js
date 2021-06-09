@@ -144,28 +144,70 @@
 //     console.log(`Listening at http://localhost:${port}`);
 // });
 
+// const express = require('express');
+// const app = express();
+// const path = require('path');
+
+// let port = process.env.PORT || 5000;
+
+// const logger = (req, res, next) => {
+//     let time = new Date().getFullYear();
+//     let method = req.method;
+//     let url = req.url;
+//     console.log(method, time, url);
+//     next();
+// }
+
+// app.get('/', logger, (req,res) => {
+//     res.send(`<h1>Home Page</h1><br><p><a href="/products">Products</a></p>`);
+
+// });
+
+// app.get('/about', (req,res) => {
+//     res.send(`<h1>About Page</h1><br><p><a href="/products">Products</a></p>`);
+// });
+
+// app.listen(port, () => {
+//     console.log(`Listening at http://localhost:${port}`);
+// });
+
+
 const express = require('express');
 const app = express();
-const path = require('path');
+const peopleRoutes = require('./routes/people');
+const {products} = require('./data');
 
-let port = process.env.PORT || 5000;
+let port = 5000;
 
-const logger = (req, res, next) => {
-    let time = new Date().getFullYear();
-    let method = req.method;
-    let url = req.url;
-    console.log(method, time, url);
-    next();
-}
+app.use(express.urlencoded({extended:false}));
 
-app.get('/', logger, (req,res) => {
-    res.send(`<h1>Home Page</h1><br><p><a href="/products">Products</a></p>`);
+app.use('/api/people', peopleRoutes);
+
+app.get('/api/products', (req,res) => {
+    const {limit,search} = req.query;
+    let sortedProducts = [...products];
+
+    if(limit) { 
+        sortedProducts = sortedProducts.slice(0,Number(limit));
+       
+    }
+    if(search) {
+        sortedProducts = sortedProducts.filter((product) => {
+            return product.name.startsWith(search);
+        });
+    }
+    res.status(200).json({success: true, products: sortedProducts});
+});
+
+app.get('/', (req,res) => {
+
+    res.sendFile('./homemod.html',{root: __dirname});
 
 });
 
-app.get('/about', (req,res) => {
-    res.send(`<h1>About Page</h1><br><p><a href="/products">Products</a></p>`);
-});
+app.post('/home', (req,res) => {
+    res.send(`Welcome ${req.body.name}`);
+})
 
 app.listen(port, () => {
     console.log(`Listening at http://localhost:${port}`);
