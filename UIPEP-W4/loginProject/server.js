@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
+const bcrypt = require('bcryptjs');
 
 // database
 mongoose.connect("mongodb://localhost:27017/Registration", {
@@ -18,7 +19,7 @@ mongoose.connect("mongodb://localhost:27017/Registration", {
 
 const port = process.env.PORT || 3000;
 
-// middleware
+// middleware npm install bcryptjs
 app.use('/public', express.static('public'));
 app.use(express.json());
 
@@ -35,9 +36,12 @@ app.get(/^\/signup[\.]*[html|htm|hml]*/, (req,res) => {
     res.sendFile('./signup.html',{root: __dirname});
 })
 
-app.post(/^\/signup[\.]*[html|htm|hml]*/, (req,res) => {
+app.post(/^\/signup[\.]*[html|htm|hml]*/,async (req,res) => {
     console.log(req.body);
-    res.json({status : 'ok'});
+
+    const {firstName, lastName, emailId, username, password} = req.body;
+
+    console.log((await bcrypt.hash(password, 10)));
 })
 
 app.get('*', (req, res) => {
