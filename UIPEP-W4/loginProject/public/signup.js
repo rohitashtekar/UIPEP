@@ -126,22 +126,29 @@ function validatePassTwo(){
     
 }
 
-signupBut.addEventListener('submit', registerUser);
+// form input
+let form = document.querySelector('.form');
+form.addEventListener('submit', registerUser);
 
-async const registerUser = (event) => {
+async function registerUser(event) {
     event.preventDefault();
+
+    const fNameValue = document.querySelector('.fname').value;
+    const lNameValue = document.querySelector('.lname').value;
+    const emailIdValue= document.querySelector('.email').value;
+    const usernameValue = document.querySelector('.username').value;
+    const passOneValue = document.querySelector('.passone').value;
+    // const passTwoValue = document.querySelector('.passtwo').value;
     
     const result = await fetch('/signup', {
         method: 'POST',
         headers: {'Content-Type':'application/json'},
         body: JSON.stringify({
-            firstName,
-            lastName,
-            emailId,
-            username,
-            passOne
+            fNameValue,
+            lNameValue,
+            emailIdValue,
+            usernameValue,
+            passOneValue
         })
     }).then(res => res.json())
-
-    console.log(result);
 }
