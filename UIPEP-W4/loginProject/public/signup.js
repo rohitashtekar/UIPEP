@@ -120,7 +120,7 @@ function validatePassTwo(){
     }
     else {
         Invalid(passTwo);
-        confirmPass.innerText = `Invalid input`;
+        confirmPass.innerText = `Passwords do not match, Try again`;
         confirmPass.style = 'color: red';
     }
     
@@ -151,4 +151,11 @@ async function registerUser(event) {
             passOneValue
         })
     }).then(res => res.json())
+
+    if(result.status === 'ok') {
+        alert(`User created successfully!`);
+    }
+    else {
+        alert(result.error);
+    }
 }

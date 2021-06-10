@@ -49,9 +49,30 @@ let loginForm = document.querySelector('.form');
 let loggedText = document.querySelector('.logged-in');
 let signupNav =  document.querySelector('.signup');
 
-loginForm.addEventListener('submit', event => {
-    event.preventDefault();
+loginForm.addEventListener('submit', loginUser)
     
-})
+async function loginUser(event) {
+    event.preventDefault();
+
+    const usernameValue = document.querySelector('.username-input').value;
+    const passOneValue = document.querySelector('.password-input').value;
+    
+    const result = await fetch('/', {
+        method: 'POST',
+        headers: {'Content-Type':'application/json'},
+        body: JSON.stringify({
+            usernameValue,
+            passOneValue
+        })
+    }).then(res => res.json())
+
+    if(result.status === 'ok') {
+        console.log(`Got the token:`,result.data);
+        alert(`Success!`);
+    }
+    else {
+        alert(result.error);
+    }
+}  
 
 
