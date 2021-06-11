@@ -7,7 +7,7 @@ const jwt = require('jsonwebtoken');
 const User = require('./model/model');
 
 // jwt secret
-const JWT_SECRET = 'skjgndofb9jag30223t023tjojwngjsvn2o3r1r32tgfwdef';
+const JWT_SECRET = '';
 
 // database
 mongoose.connect("mongodb://localhost:27017/Registration", {
@@ -90,7 +90,7 @@ app.post(/^\/signup[\.]*[html|htm|hml]*/,async (req,res) => {
         res.json({status: 'ok'});
     } catch(error) {
         if(error.code === 11000) {
-            return res.json({status: 'error', error: `Username is already in use`});
+            return res.json({status: 'error', error: `Username/Email is already in use`});
         }
         throw error;
     }

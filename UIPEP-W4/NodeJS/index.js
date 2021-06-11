@@ -4,7 +4,8 @@ const app = express();
 const mongoose = require('mongoose');
 const User = require('./users');
 
-mongoose.connect('mongodb+srv://rohitashtekar:nougat@cluster0.4wosp.mongodb.net/test?retryWrites=true&w=majority',
+//enter password
+mongoose.connect('mongodb+srv://rohitashtekar:@cluster0.4wosp.mongodb.net/test?retryWrites=true&w=majority',
 {
     useNewUrlParser : true,
     useUnifiedTopology : true
