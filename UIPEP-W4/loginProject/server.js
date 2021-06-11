@@ -7,7 +7,7 @@ const jwt = require('jsonwebtoken');
 const User = require('./model/model');
 
 // jwt secret
-const JWT_SECRET = '';
+const JWT_SECRET = 'skjgndofb9jag30223t023tjojwngjsvn2o3r1r32tgfwdef';
 
 // database
 mongoose.connect("mongodb://localhost:27017/Registration", {
