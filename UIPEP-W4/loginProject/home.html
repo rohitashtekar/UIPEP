@@ -20,5 +20,15 @@
    
     <h1 class="head">Welcome!</h1>
     <h4 class="content"><i>This is my Homepage</i></h4>
+
+    <script>
+        function preventBack() {
+            window.history.forward(); 
+        }
+          
+        setTimeout("preventBack()", 0);
+          
+        window.onunload = function () { null };
+    </script>
 </body>
 </html>

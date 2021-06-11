@@ -3,7 +3,11 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
 const User = require('./model/model');
+
+// jwt secret
+const JWT_SECRET = 'skjgndofb9jag30223t023tjojwngjsvn2o3r1r32tgfwdef';
 
 // database
 mongoose.connect("mongodb://localhost:27017/Registration", {
@@ -27,12 +31,31 @@ app.use('/public', express.static('public'));
 app.use(express.json());
 
 
-app.get('/', (req,res) => {      ///^\/login[\w]*/
+app.get('/', (req,res) => {      // /^\/login[\w]*/
     res.sendFile('./login.html',{root: __dirname});
 });
 
-app.post('/', (req,res) => {      ///^\/login[\w]*/
-    res.json({status: 'ok', data: 'Coming Soon'});
+app.post('/',async (req,res) => {
+    const {
+        usernameValue: username, 
+        passOneValue: password
+    } = req.body;
+
+    const user = await User.findOne({username}).lean();
+    
+    if(!user) {
+        return res.json({status: 'error'});
+    }
+    if(await bcrypt.compare(password, user.password)) {
+        let token = jwt.sign(
+            {
+                id: user._id, 
+                username: user.username
+            }, JWT_SECRET
+        );
+        return res.json({status: 'ok', data: token});
+    }
+    return res.json({status: 'error'});
 });
 
 app.get(/^\/home[\.]*[html|htm|hml]*/, (req,res) => {   

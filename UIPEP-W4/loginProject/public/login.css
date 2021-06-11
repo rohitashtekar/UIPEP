@@ -162,7 +162,8 @@ body {
     font-weight: bold;
 }
 
-.valid-pass, .valid-user {
+.validity {
+    text-align: center;
     margin-left: 2px;
     font-weight: bold;
 }

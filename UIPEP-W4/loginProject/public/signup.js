@@ -119,11 +119,17 @@ function validatePassTwo(){
         }
     }
     else {
-        Invalid(passTwo);
-        confirmPass.innerText = `Passwords do not match, Try again`;
-        confirmPass.style = 'color: red';
+        if(passOne.value === passTwo.value){
+            Valid(passTwo);
+            confirmPass.innerText = `Passwords needs to be greater than 7 chracters`;
+            confirmPass.style = 'color: red';
+        }
+        else{
+            Invalid(passTwo);
+            confirmPass.innerText = `Passwords do not match, Try again`;
+            confirmPass.style = 'color: red';
+        }
     }
-    
 }
 
 // form input
@@ -153,7 +159,8 @@ async function registerUser(event) {
     }).then(res => res.json())
 
     if(result.status === 'ok') {
-        alert(`User created successfully!`);
+        window.location.replace("/");
+
     }
     else {
         alert(result.error);
