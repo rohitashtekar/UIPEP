@@ -172,27 +172,52 @@
 // });
 
 
+// const express = require('express');
+// const app = express();
+// const peopleRoutes = require('./routes/people');
+// const productRoutes = require('./routes/products');
+
+// let port = 5000;
+
+// app.use(express.urlencoded({extended:false}));
+// app.use(express.json());
+
+// app.use('/api/people', peopleRoutes);
+// app.use('/api/products', productRoutes);
+
+// app.get('/', (req,res) => {
+//     res.sendFile('./homemod.html',{root: __dirname});
+// });
+
+// app.post('/home', (req,res) => {
+//     res.send(`Welcome ${req.body.name}`);
+// })
+
+// app.listen(port, () => {
+//     console.log(`Listening at http://localhost:${port}`);
+// });
+
+//socket io
 const express = require('express');
 const app = express();
-const peopleRoutes = require('./routes/people');
-const productRoutes = require('./routes/products');
+const server = require('http').createServer(app)
+const io = require('socket.io')(server, {cors: {origin: "*"}});
 
-let port = 5000;
-
-app.use(express.urlencoded({extended:false}));
-app.use(express.json());
-
-app.use('/api/people', peopleRoutes);
-app.use('/api/products', productRoutes);
+app.set('view engine','ejs');
 
 app.get('/', (req,res) => {
-    res.sendFile('./homemod.html',{root: __dirname});
+    res.render('message');
 });
 
-app.post('/home', (req,res) => {
-    res.send(`Welcome ${req.body.name}`);
-})
+server.listen(8000, () => {
+    console.log(`Listening on http://localhost:8000`);
+});
 
-app.listen(port, () => {
-    console.log(`Listening at http://localhost:${port}`);
+io.on('connection', (socket) => {
+    console.log(`User connected: `+ socket.id);
+
+    socket.on("message", (data) => {
+        socket.broadcast.emit('message', data);
+    })
+
 });

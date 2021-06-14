@@ -24,7 +24,7 @@ mongoose.connect("mongodb://localhost:27017/Registration", {
     }
 });
 
-const port = process.env.PORT || 3000;
+const port = 3000;
 
 // middleware npm install bcryptjs
 app.use('/public', express.static('public'));
@@ -104,6 +104,6 @@ app.listen(port, (error) => {
     if(error){
         return console.log(`Error: ${error}`);
     }
-    console.log(`Listening on port: http://localhost:${port}`);
+    console.log(`Listening on port: https://localhost:${port}`);
 })
 
