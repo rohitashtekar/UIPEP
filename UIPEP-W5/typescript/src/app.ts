@@ -50,4 +50,10 @@
 
 // combine('rohit',23);
 
+let greet : Function;
 
+greet = () => {
+   console.log("Hello, again");
+}
+
+console.log("What's up Daddy");
