@@ -41,6 +41,6 @@
 // combine('rohit',23);
 var greet;
 greet = function () {
-    console.log("Hello, again");
+    console.log("Hello, People");
 };
-console.log("What's up Daddy");
+greet();

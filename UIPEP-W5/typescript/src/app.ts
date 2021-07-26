@@ -53,7 +53,7 @@
 let greet : Function;
 
 greet = () => {
-   console.log("Hello, again");
+   console.log("Hello, People");
 }
 
-console.log("What's up Daddy");
+greet();
