@@ -43,4 +43,33 @@ var greet;
 greet = function () {
     console.log("Hello, People");
 };
-greet();
+var add = function (a, b, c) {
+    if (c === void 0) { c = 10; }
+    var result;
+    result = a + b;
+    console.log("Add:", result);
+    console.log("3rd Para:", c);
+};
+add(5, 6);
+var minus = function (a, b) {
+    return a - b;
+};
+var result1 = minus(10, 6);
+console.log("Minus:", result1);
+function details(user) {
+    console.log(user.name + " with UID " + user.uid + ", says Hello!");
+}
+var user1 = {
+    name: "Rohit",
+    uid: 1264
+};
+details(user1);
+var calc;
+calc = function (numOne, numTwo, action) {
+    return action === 'add' ? numOne + numTwo : numOne - numTwo;
+};
+var logDetails;
+logDetails = function (ninja) {
+    console.log(ninja.name + " is " + ninja.age + " years old!");
+};
+logDetails({ name: "Rohit", age: 23 });
