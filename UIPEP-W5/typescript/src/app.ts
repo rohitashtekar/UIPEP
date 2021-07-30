@@ -50,54 +50,56 @@
 
 // combine('rohit',23);
 
-let greet : Function;
+// let greet : Function;
 
-greet = () => {
-   console.log("Hello, People");
-}
+// greet = () => {
+//    console.log("Hello, People");
+// }
 
-const add = (a:number, b:number, c:number|string = 10) => {
-   let result: number;
-   result = a + b;
-   console.log(`Add:`,result);
-   console.log(`3rd Para:`,c);
-}
+// const add = (a:number, b:number, c:number|string = 10) => {
+//    let result: number;
+//    result = a + b;
+//    console.log(`Add:`,result);
+//    console.log(`3rd Para:`,c);
+// }
 
-add(5,6);
+// add(5,6);
 
-const minus = (a: number, b: number) => {
-   return a - b;
-}
+// const minus = (a: number, b: number) => {
+//    return a - b;
+// }
 
-let result1 = minus(10,6);
-console.log(`Minus:`,result1);
+// let result1 = minus(10,6);
+// console.log(`Minus:`,result1);
 
-type strOrNum = string | number;
+// type strOrNum = string | number;
 
-function details(user: {name: string, uid: strOrNum}){
-   console.log(`${user.name} with UID ${user.uid}, says Hello!`);
-}
+// function details(user: {name: string, uid: strOrNum}){
+//    console.log(`${user.name} with UID ${user.uid}, says Hello!`);
+// }
 
-let user1 = {
-   name: "Rohit",
-   uid: 1264
-}
+// let user1 = {
+//    name: "Rohit",
+//    uid: 1264
+// }
 
-details(user1)
+// details(user1)
 
-let calc: (a: number, b: number, c: string) => number;
+// let calc: (a: number, b: number, c: string) => number;
 
-calc = (numOne: number, numTwo: number, action: string) => {
-    return action === 'add' ? numOne + numTwo : numOne - numTwo;
-}
+// calc = (numOne: number, numTwo: number, action: string) => {
+//     return action === 'add' ? numOne + numTwo : numOne - numTwo;
+// }
 
-let logDetails: (obj: {name: string, age: number}) => void;
-type person = {name: string, age: number};
+// let logDetails: (obj: {name: string, age: number}) => void;
+// type person = {name: string, age: number};
 
-logDetails = (ninja: person) => {
-   console.log(`${ninja.name} is ${ninja.age} years old!`);
-};
+// logDetails = (ninja: person) => {
+//    console.log(`${ninja.name} is ${ninja.age} years old!`);
+// };
 
-logDetails({name: "Rohit", age: 23});
+// logDetails({name: "Rohit", age: 23});
 
+let anchor = document.querySelector('a')!;
 
+console.log(anchor.href);
