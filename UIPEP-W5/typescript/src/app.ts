@@ -103,8 +103,21 @@
 // let anchor = document.querySelector('a')!;
 
 // console.log(anchor.href);
+class Invoice {
+    readonly client : string;
+    private details: string;
+    public amount: number;
 
-import { Invoice } from './classes/invoice.js'
+    constructor(c: string, d: string, a: number) {
+        this.client = c;
+        this.details = d;
+        this.amount = a;
+    }
+
+    format() {
+        return `${this.client} owes ${this.amount} for ${this.details}`
+    }
+}
 
 const invOne = new Invoice('Rohit','Whey Protein',1100);
 const invTwo = new Invoice('Vineet','Funafa',800);
