@@ -103,6 +103,13 @@
 // let anchor = document.querySelector('a')!;
 
 // console.log(anchor.href);
+
+interface IsPerson {
+    name: string;
+    age: number;
+    speak(a: string): void;
+    spend(a: number): number;
+}
 class Invoice {
     readonly client : string;
     private details: string;

@@ -1,4 +1,3 @@
-"use strict";
 // function add(num1: number,num2: number) {
 //     return num1 + num2;
 // }
@@ -77,9 +76,19 @@
 // logDetails({name: "Rohit", age: 23});
 // let anchor = document.querySelector('a')!;
 // console.log(anchor.href);
-var invoice_js_1 = require("./classes/invoice.js");
-var invOne = new invoice_js_1.Invoice('Rohit', 'Whey Protein', 1100);
-var invTwo = new invoice_js_1.Invoice('Vineet', 'Funafa', 800);
+var Invoice = /** @class */ (function () {
+    function Invoice(c, d, a) {
+        this.client = c;
+        this.details = d;
+        this.amount = a;
+    }
+    Invoice.prototype.format = function () {
+        return this.client + " owes " + this.amount + " for " + this.details;
+    };
+    return Invoice;
+}());
+var invOne = new Invoice('Rohit', 'Whey Protein', 1100);
+var invTwo = new Invoice('Vineet', 'Funafa', 800);
 var invoices = [];
 invoices.push(invOne);
 invoices.push(invTwo);
