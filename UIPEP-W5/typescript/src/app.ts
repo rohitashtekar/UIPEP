@@ -100,6 +100,39 @@
 
 // logDetails({name: "Rohit", age: 23});
 
-let anchor = document.querySelector('a')!;
+// let anchor = document.querySelector('a')!;
 
-console.log(anchor.href);
+// console.log(anchor.href);
+
+import { Invoice } from './classes/invoice.js'
+
+const invOne = new Invoice('Rohit','Whey Protein',1100);
+const invTwo = new Invoice('Vineet','Funafa',800);
+
+let invoices: Invoice[] = [];
+invoices.push(invOne);
+invoices.push(invTwo);
+
+invTwo.amount = 500;
+
+invoices.forEach( inv => {
+    console.log(inv.client, inv.amount, inv.format());
+})
+
+console.log(invOne, invTwo);
+
+const form = document.querySelector('.new-item-form') as HTMLFormElement;
+
+const type = document.querySelector('#type') as HTMLSelectElement;
+const tofrom = document.querySelector('#tofrom') as HTMLInputElement;
+const details = document.querySelector('#details') as HTMLInputElement;
+const amount = document.querySelector('#amount') as HTMLInputElement;
+
+form.addEventListener('submit', (e: Event) => {
+    e.preventDefault();
+
+    console.log(type.value,
+        tofrom.value,
+        details.value,
+        amount.value);
+});

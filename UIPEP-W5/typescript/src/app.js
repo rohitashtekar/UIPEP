@@ -74,5 +74,35 @@
 //    console.log(`${ninja.name} is ${ninja.age} years old!`);
 // };
 // logDetails({name: "Rohit", age: 23});
-var anchor = document.querySelector('a');
-console.log(anchor.href);
+// let anchor = document.querySelector('a')!;
+// console.log(anchor.href);
+var Invoice = /** @class */ (function () {
+    function Invoice(c, d, a) {
+        this.client = c;
+        this.details = d;
+        this.amount = a;
+    }
+    Invoice.prototype.format = function () {
+        return this.client + " owes " + this.amount + " for " + this.details;
+    };
+    return Invoice;
+}());
+var invOne = new Invoice('Rohit', 'Whey Protein', 1100);
+var invTwo = new Invoice('Vineet', 'Funafa', 800);
+var invoices = [];
+invoices.push(invOne);
+invoices.push(invTwo);
+invTwo.amount = 500;
+invoices.forEach(function (inv) {
+    console.log(inv.client, inv.amount, inv.format());
+});
+console.log(invOne, invTwo);
+var form = document.querySelector('.new-item-form');
+var type = document.querySelector('#type');
+var tofrom = document.querySelector('#tofrom');
+var details = document.querySelector('#details');
+var amount = document.querySelector('#amount');
+form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    console.log(type.value, tofrom.value, details.value, amount.value);
+});
