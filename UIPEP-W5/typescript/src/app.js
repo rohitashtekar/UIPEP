@@ -1,6 +1,8 @@
+"use strict";
 // function add(num1: number,num2: number) {
 //     return num1 + num2;
 // }
+exports.__esModule = true;
 // let res = add(10, 12);
 // console.log(res);
 // enum Role{ admin = 1, read_only = 2, author = 200}
@@ -76,27 +78,47 @@
 // logDetails({name: "Rohit", age: 23});
 // let anchor = document.querySelector('a')!;
 // console.log(anchor.href);
-var Invoice = /** @class */ (function () {
-    function Invoice(c, d, a) {
-        this.client = c;
-        this.details = d;
-        this.amount = a;
-    }
-    Invoice.prototype.format = function () {
-        return this.client + " owes " + this.amount + " for " + this.details;
-    };
-    return Invoice;
-}());
-var invOne = new Invoice('Rohit', 'Whey Protein', 1100);
-var invTwo = new Invoice('Vineet', 'Funafa', 800);
-var invoices = [];
-invoices.push(invOne);
-invoices.push(invTwo);
-invTwo.amount = 500;
-invoices.forEach(function (inv) {
-    console.log(inv.client, inv.amount, inv.format());
-});
-console.log(invOne, invTwo);
+var invoice_js_1 = require("../invoice.js");
+var payment_js_1 = require("../payment.js");
+var docOne;
+var docTwo;
+docOne = new invoice_js_1.Invoice('Ro', 'Logo Design', 2000);
+docTwo = new payment_js_1.Payment('Vivian', 'RapSong', 8000);
+var docs = [];
+docs.push(docOne);
+docs.push(docTwo);
+console.log(docs);
+// interface IsPerson {
+//     name: string;
+//     age: number;
+//     speak(a: string): void;
+//     spend(a: number): number;
+// }
+// const me: IsPerson = {
+//     name: 'Rohit',
+//     age: 23,
+//     speak(text: string): void{
+//         console.log(text);
+//     },
+//     spend(num: number): number{
+//         console.log(`${this.name} spent $${num}`);
+//         return num;
+//     }
+// }
+// const greetPerson = (person: IsPerson) => {
+//     console.log(`Hello ${person.name}`);
+// }
+// greetPerson(me)
+// const invOne = new Invoice('Rohit','Whey Protein',1100);
+// const invTwo = new Invoice('Vineet','Funafa',800);
+// let invoices: Invoice[] = [];
+// invoices.push(invOne);
+// invoices.push(invTwo);
+// invTwo.amount = 500;
+// invoices.forEach( inv => {
+//     console.log(inv.client, inv.amount, inv.format());
+// })
+// console.log(invOne, invTwo);
 var form = document.querySelector('.new-item-form');
 var type = document.querySelector('#type');
 var tofrom = document.querySelector('#tofrom');

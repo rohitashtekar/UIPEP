@@ -104,42 +104,62 @@
 
 // console.log(anchor.href);
 
-interface IsPerson {
-    name: string;
-    age: number;
-    speak(a: string): void;
-    spend(a: number): number;
-}
-class Invoice {
-    readonly client : string;
-    private details: string;
-    public amount: number;
+import { Invoice } from '../invoice.js'
+import { Payment } from '../payment.js'
+import { HasFormatter } from '../HasFormatter.js'
 
-    constructor(c: string, d: string, a: number) {
-        this.client = c;
-        this.details = d;
-        this.amount = a;
-    }
+let docOne: HasFormatter;
+let docTwo: HasFormatter;
 
-    format() {
-        return `${this.client} owes ${this.amount} for ${this.details}`
-    }
-}
+docOne = new Invoice('Ro','Logo Design',2000);
+docTwo = new Payment('Vivian','RapSong',8000);
 
-const invOne = new Invoice('Rohit','Whey Protein',1100);
-const invTwo = new Invoice('Vineet','Funafa',800);
+let docs: HasFormatter[] =[];
+docs.push(docOne);
+docs.push(docTwo);
 
-let invoices: Invoice[] = [];
-invoices.push(invOne);
-invoices.push(invTwo);
+console.log(docs);
 
-invTwo.amount = 500;
 
-invoices.forEach( inv => {
-    console.log(inv.client, inv.amount, inv.format());
-})
+// interface IsPerson {
+//     name: string;
+//     age: number;
+//     speak(a: string): void;
+//     spend(a: number): number;
+// }
 
-console.log(invOne, invTwo);
+// const me: IsPerson = {
+//     name: 'Rohit',
+//     age: 23,
+//     speak(text: string): void{
+//         console.log(text);
+//     },
+//     spend(num: number): number{
+//         console.log(`${this.name} spent $${num}`);
+//         return num;
+//     }
+// }
+
+// const greetPerson = (person: IsPerson) => {
+//     console.log(`Hello ${person.name}`);
+// }
+
+// greetPerson(me)
+
+// const invOne = new Invoice('Rohit','Whey Protein',1100);
+// const invTwo = new Invoice('Vineet','Funafa',800);
+
+// let invoices: Invoice[] = [];
+// invoices.push(invOne);
+// invoices.push(invTwo);
+
+// invTwo.amount = 500;
+
+// invoices.forEach( inv => {
+//     console.log(inv.client, inv.amount, inv.format());
+// })
+
+// console.log(invOne, invTwo);
 
 const form = document.querySelector('.new-item-form') as HTMLFormElement;
 
