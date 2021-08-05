@@ -162,9 +162,36 @@
 
 // console.log(invOne, invTwo);
 
-import { Invoice } from './invoice.js'
-import { Payment } from './payment.js'
-import { HasFormatter } from './HasFormatter.js'
+interface HasFormatter {
+    format(): string;
+}
+class Invoice implements HasFormatter{
+    constructor(
+        readonly client: string,
+        private details: string,
+        public amount: number
+    ) {
+        
+    }
+
+    format() {
+        return `${this.client} owes $${this.amount} for ${this.details}`
+    }
+}
+
+class Payment implements HasFormatter{
+    constructor(
+        readonly recipient: string,
+        private details: string,
+        public amount: number
+    ) {
+        
+    }
+
+    format() {
+        return `${this.recipient} is owed $${this.amount} for ${this.details}`
+    }
+}
 
 const form = document.querySelector('.new-item-form') as HTMLFormElement;
 
