@@ -1,7 +1,5 @@
 "use strict";
-exports.__esModule = true;
-exports.Invoice = void 0;
-var Invoice = /** @class */ (function () {
+var Invoice = (function () {
     function Invoice(client, details, amount) {
         this.client = client;
         this.details = details;

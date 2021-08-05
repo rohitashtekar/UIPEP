@@ -1,8 +1,7 @@
-"use strict";
 // function add(num1: number,num2: number) {
 //     return num1 + num2;
 // }
-exports.__esModule = true;
+"use strict";
 // let res = add(10, 12);
 // console.log(res);
 // enum Role{ admin = 1, read_only = 2, author = 200}
@@ -78,16 +77,18 @@ exports.__esModule = true;
 // logDetails({name: "Rohit", age: 23});
 // let anchor = document.querySelector('a')!;
 // console.log(anchor.href);
-var invoice_js_1 = require("../invoice.js");
-var payment_js_1 = require("../payment.js");
-var docOne;
-var docTwo;
-docOne = new invoice_js_1.Invoice('Ro', 'Logo Design', 2000);
-docTwo = new payment_js_1.Payment('Vivian', 'RapSong', 8000);
-var docs = [];
-docs.push(docOne);
-docs.push(docTwo);
-console.log(docs);
+// import { Invoice } from '../invoice.js'
+// import { Payment } from '../payment.js'
+// import { HasFormatter } from '../HasFormatter.js'
+//invoice
+// let docOne: HasFormatter;
+// let docTwo: HasFormatter;
+// docOne = new Invoice('Ro','Logo Design',2000);
+// docTwo = new Payment('Vivian','RapSong',8000);
+// let docs: HasFormatter[] =[];
+// docs.push(docOne);
+// docs.push(docTwo);
+// console.log(docs);
 // interface IsPerson {
 //     name: string;
 //     age: number;
@@ -119,6 +120,8 @@ console.log(docs);
 //     console.log(inv.client, inv.amount, inv.format());
 // })
 // console.log(invOne, invTwo);
+import { Invoice } from "../invoice.js";
+import { Payment } from "../payment.js";
 var form = document.querySelector('.new-item-form');
 var type = document.querySelector('#type');
 var tofrom = document.querySelector('#tofrom');
@@ -126,5 +129,12 @@ var details = document.querySelector('#details');
 var amount = document.querySelector('#amount');
 form.addEventListener('submit', function (e) {
     e.preventDefault();
-    console.log(type.value, tofrom.value, details.value, amount.value);
+    var doc;
+    if (type.value === 'invoice') {
+        doc = new Invoice(tofrom.value, details.value, amount.valueAsNumber);
+    }
+    else {
+        doc = new Payment(tofrom.value, details.value, amount.valueAsNumber);
+    }
+    console.log(doc);
 });

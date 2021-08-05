@@ -104,21 +104,22 @@
 
 // console.log(anchor.href);
 
-import { Invoice } from '../invoice.js'
-import { Payment } from '../payment.js'
-import { HasFormatter } from '../HasFormatter.js'
+// import { Invoice } from '../invoice.js'
+// import { Payment } from '../payment.js'
+// import { HasFormatter } from '../HasFormatter.js'
 
-let docOne: HasFormatter;
-let docTwo: HasFormatter;
+//invoice
+// let docOne: HasFormatter;
+// let docTwo: HasFormatter;
 
-docOne = new Invoice('Ro','Logo Design',2000);
-docTwo = new Payment('Vivian','RapSong',8000);
+// docOne = new Invoice('Ro','Logo Design',2000);
+// docTwo = new Payment('Vivian','RapSong',8000);
 
-let docs: HasFormatter[] =[];
-docs.push(docOne);
-docs.push(docTwo);
+// let docs: HasFormatter[] =[];
+// docs.push(docOne);
+// docs.push(docTwo);
 
-console.log(docs);
+// console.log(docs);
 
 
 // interface IsPerson {
@@ -161,6 +162,10 @@ console.log(docs);
 
 // console.log(invOne, invTwo);
 
+import { Invoice } from './invoice.js'
+import { Payment } from './payment.js'
+import { HasFormatter } from './HasFormatter.js'
+
 const form = document.querySelector('.new-item-form') as HTMLFormElement;
 
 const type = document.querySelector('#type') as HTMLSelectElement;
@@ -171,8 +176,12 @@ const amount = document.querySelector('#amount') as HTMLInputElement;
 form.addEventListener('submit', (e: Event) => {
     e.preventDefault();
 
-    console.log(type.value,
-        tofrom.value,
-        details.value,
-        amount.value);
+    let doc: HasFormatter;
+
+    if(type.value === 'invoice') {
+        doc = new Invoice(tofrom.value, details.value, amount.valueAsNumber)
+    } else {
+        doc = new Payment(tofrom.value, details.value, amount.valueAsNumber)
+    }
+    console.log(doc);
 });

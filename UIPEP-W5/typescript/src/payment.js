@@ -1,7 +1,5 @@
 "use strict";
-exports.__esModule = true;
-exports.Payment = void 0;
-var Payment = /** @class */ (function () {
+var Payment = (function () {
     function Payment(recipient, details, amount) {
         this.recipient = recipient;
         this.details = details;
