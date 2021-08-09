@@ -162,6 +162,7 @@
 
 // console.log(invOne, invTwo);
 
+//Finance Logger
 interface HasFormatter {
     format(): string;
 }
@@ -193,12 +194,38 @@ class Payment implements HasFormatter{
     }
 }
 
+class ListTemplate {
+    constructor(private container: HTMLUListElement){}
+    
+    render(item: HasFormatter, header: string, pos: 'start' | 'end'){
+        const li = document.createElement('li');
+
+        const h4 = document.createElement('h4');
+        h4.innerText = header;
+        li.appendChild(h4);
+
+        const p = document.createElement('p');
+        p.innerText = item.format()
+        li.appendChild(p);
+    
+        if(pos === 'start') {
+            this.container.appendChild(li);
+        } else {
+            this.container.appendChild(li);
+        }
+    }
+}
+
 const form = document.querySelector('.new-item-form') as HTMLFormElement;
 
 const type = document.querySelector('#type') as HTMLSelectElement;
 const tofrom = document.querySelector('#tofrom') as HTMLInputElement;
 const details = document.querySelector('#details') as HTMLInputElement;
 const amount = document.querySelector('#amount') as HTMLInputElement;
+
+//list template instance
+const ul = document.querySelector('ul')!;
+const list = new ListTemplate(ul);
 
 form.addEventListener('submit', (e: Event) => {
     e.preventDefault();
@@ -211,4 +238,6 @@ form.addEventListener('submit', (e: Event) => {
         doc = new Payment(tofrom.value, details.value, amount.valueAsNumber)
     }
     console.log(doc);
+
+    list.render(doc, type.value, 'end');
 });

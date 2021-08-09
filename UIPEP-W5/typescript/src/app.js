@@ -23,11 +23,35 @@ var Payment = (function () {
     };
     return Payment;
 }());
+var ListTemplate = (function () {
+    function ListTemplate(container) {
+        this.container = container;
+    }
+    ListTemplate.prototype.render = function (item, header, pos) {
+        var li = document.createElement('li');
+        var h4 = document.createElement('h4');
+        h4.innerText = header;
+        li.appendChild(h4);
+        var p = document.createElement('p');
+        p.innerText = item.format();
+        li.appendChild(p);
+        if (pos === 'start') {
+            this.container.appendChild(li);
+        }
+        else {
+            this.container.appendChild(li);
+        }
+    };
+    return ListTemplate;
+}());
 var form = document.querySelector('.new-item-form');
 var type = document.querySelector('#type');
 var tofrom = document.querySelector('#tofrom');
 var details = document.querySelector('#details');
 var amount = document.querySelector('#amount');
+//list template instance
+var ul = document.querySelector('ul');
+var list = new ListTemplate(ul);
 form.addEventListener('submit', function (e) {
     e.preventDefault();
     var doc;
@@ -38,4 +62,5 @@ form.addEventListener('submit', function (e) {
         doc = new Payment(tofrom.value, details.value, amount.valueAsNumber);
     }
     console.log(doc);
+    list.render(doc, type.value, 'end');
 });
